@@ -35,10 +35,19 @@
 		      		<table>
 		      			<tr>
 		      				<td><a id="contentP" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=P">P</a></td>
-		      				<td><a id="contentMS" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=MS">MS</a></td>
-		      			</tr>
-		      			<tr>
-		      				<td><a id="contentV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=V">V</a></td>
+		      				';
+		      				if($productType == 'LS') {
+		      					echo '<td><a id="contentMS" href="LScontentTypes.php?market='.$market.'&productType='.$productType.'&contentType=MS">MS</a></td>
+		      					</tr>
+		      					<tr>
+		      						<td><a id="contentV" href="LScontentTypes.php?market='.$market.'&productType='.$productType.'&contentType=V">V</a></td>';
+		      				} else {
+		      					echo '<td><a id="contentMS" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=MS">MS</a></td>
+		      					</tr>
+		      					<tr>
+		      						<td><a id="contentV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=V">V</a></td>';
+		      				}
+		      			echo '
 		      				<td><a id="contentPL" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=PL">PL</a></td>
 		      			</tr>
 		      		</table> ';
