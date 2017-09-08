@@ -115,6 +115,14 @@ function showDiv (box,cbname) {
     	}
     } else if (document.getElementById("C").checked) {
     	visSave = "block";
+    	var prodChboxs = document.getElementsByName("productType[]");
+    	for(var i=0; i<prodChboxs.length; i++) {
+    		if(prodChboxs[i].value !== "C") {
+    			if(prodChboxs[i].checked) {
+	    			visSave = "none";
+	    		}
+    		}
+    	}
     }
 
     document.getElementById(box).style.display = vis;

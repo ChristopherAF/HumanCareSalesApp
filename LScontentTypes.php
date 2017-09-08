@@ -27,18 +27,18 @@
 			      		if($contentType == 'MS') {
 			      			echo '
 			      			<tr>
-			      				<td><a id="LScontentQRG" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=MSQRG">QRG</a></td>
-			      				<td><a id="LScontentMM" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=MSMM">MM</a></td>
+			      				<td><a id="LScontentQRG" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType='.$contentType.'&contentTypeLS=QRG">QRG</a></td>
+			      				<td><a id="LScontentMM" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType='.$contentType.'&contentTypeLS=MM">MM</a></td>
 			      			</tr>
 			      			';
 			      		} else if ($contentType == 'V') {
 			      			echo '
 			      			<tr>
-			      				<td><a id="LScontentPV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=VPV">PV</a></td>
-			      				<td><a id="LScontentTV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=VTV">TV</a></td>
+			      				<td><a id="LScontentPV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType='.$contentType.'&contentTypeLS=PV">PV</a></td>
+			      				<td><a id="LScontentTV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType='.$contentType.'&contentTypeLS=TV">TV</a></td>
 			      			</tr>
 			      			<tr>
-			      				<td><a id="LScontentSTV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType=VSTV">STV</a></td>
+			      				<td><a id="LScontentSTV" href="showContent.php?market='.$market.'&productType='.$productType.'&contentType='.$contentType.'&contentTypeLS=STV">STV</a></td>
 			      				<td></td>
 			      			</tr>
 			      			';

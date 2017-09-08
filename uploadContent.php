@@ -21,7 +21,7 @@
 				?>
 				<form name="uploadContentForm" action="uploadContentHandling.php" method="post" enctype="multipart/form-data">
 		      		<input type="file" name="uploadedFile">
-		      		<div id="divMA">
+		      		<div id="divMA" style="background-color: gray;">
 				      	<input type="checkbox" name="market[]" id="US" onclick="showDiv('divPT','market[]')" value="US"><p>US</p>
 				      	<input type="checkbox" name="market[]" id="NL" onclick="showDiv('divPT','market[]')" value="NL"><p>NL</p>
 				      	<input type="checkbox" name="market[]" id="SE" onclick="showDiv('divPT','market[]')" value="SE"><p>SE</p>
@@ -34,12 +34,12 @@
 				      	<input type="checkbox" name="productType[]" id="LS" onclick="showDiv('divCT','productType[]')" value="LS"><p>LS</p>
 				      	<input type="checkbox" name="productType[]" id="HB" onclick="showDiv('divCT','productType[]')" value="HB"><p>HB</p>
 				      	<input type="checkbox" name="productType[]" id="CC" onclick="showDiv('divCT','productType[]')" value="CC"><p>CC</p>
-				      	<div id="divBS" style="display:none">
+				      	<div id="divBS" style="background-color: gray;display:none">
 				      		<input type="checkbox" name="productType[]" id="BS" onclick="showDiv(['divCT'],'productType[]')" value="BS"><p>BS</p>
 				      	</div>
 				      	<input type="checkbox" name="productType[]" id="C" onclick="showDiv(['divCT'],'productType[]')" value="C"><p>C</p>
 			      	</div>
-			      	<div id="divCT" style="display:none">
+			      	<div id="divCT" style="background-color: gray;display:none">
 			      		<div id="divBSCT" style="display:none;">
 					      	<input type="checkbox" name="contentType[]" id="P" onclick="showDiv('divSave','contentType[]')" value="P"></td><p>P</p>
 					      	<input type="checkbox" name="contentType[]" id="V" onclick="showDiv('divSave','contentType[]')" value="V"></td><p>V</p>
@@ -51,7 +51,7 @@
 				      	<input type="checkbox" name="contentTypeLSMS[]" id="QRG" onclick="showDiv('divSave','contentTypeLSMS[]')" value="QRG"></td><p>QRG</p>
 				      	<input type="checkbox" name="contentTypeLSMS[]" id="MM" onclick="showDiv('divSave','contentTypeLSMS[]')" value="MM"></td><p>MM</p>
 			      	</div>
-			      	<div id="divLSV" style="display:none">
+			      	<div id="divLSV" style="background-color: gray;display:none">
 				      	<input type="checkbox" name="contentTypeLSV[]" id="PV" onclick="showDiv('divSave','contentTypeLSV[]')" value="PV"></td><p>PV</p>
 				      	<input type="checkbox" name="contentTypeLSV[]" id="TV" onclick="showDiv('divSave','contentTypeLSV[]')" value="TV"></td><p>TV</p>
 				      	<input type="checkbox" name="contentTypeLSV[]" id="STV" onclick="showDiv('divSave','contentTypeLSV[]')" value="STV"></td><p>STV</p>

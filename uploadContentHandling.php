@@ -15,47 +15,42 @@
 		$CTLSMS = @$_POST['contentTypeLSMS'];
 		$CTLSV = @$_POST['contentTypeLSV'];
 
-		// ADD CHECK FOR THAT FILE NAME IS NOT EMPTY
-
-
-		//NOT COMPLETE
-		if(!empty($MA)) {
-			if(!empty($PT)) {
-				if(!empty($CT)) {
-					if($dbConnected) { // WRONG ROW
-						for($i=0; $i<sizeof($MA); $i++) {
-							for($j=0; $j<sizeof($PT); $j++) {
-								for($k=0; $k<sizeof($CT); $k++) {
-									if(!(($PT[$j]=='LS' && $CT[$k]=='MS') || ($PT[$j]=='LS' && $CT[$k]=='V'))) {
-										$content_SQLinsert = "INSERT INTO files (MA, PT, CT, filename, active)";
-										$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$filename."', '1')";
-										echo $content_SQLinsert.'<br/>';
-										//$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
-									} else {
-										if (($PT[$j]=='LS' && $CT[$k]=='MS') && !empty($CTLSMS)) {
-											$content_SQLinsert = "INSERT INTO files (MA, PT, CT, filename, active)";
-											$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CTLSMS[$k]."', '".$filename."', '1')";
-											echo $content_SQLinsert.'<br/>';
-											//$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
-										} else {
-											echo 'If Lifting solutions and Market & Sales material is checked, subcategory must be chosen.';
-										}
-									}
+	//	if($filename !== '') {
+			if($dbConnected) {
+				for($i=0; $i<sizeof($MA); $i++) {
+					for($j=0; $j<sizeof($PT); $j++) {
+						if($PT[$j] == "C") {
+							$content_SQLinsert = "INSERT INTO files (MA, PT, filename, active)";
+							$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$filename."', '1')";
+							echo $content_SQLinsert.'<br/>';
+							//$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
+						}
+						for($k=0; $k<sizeof($CT); $k++) {
+							if(($PT[$j] == "LS") && ($CT[$k] == "MS")) {
+								for($l=0; $l<sizeof($CTLSMS); $l++) {
+									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, LSMS, filename, active)";
+									$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$CTLSMS[$l]."', '".$filename."', '1')";
+									echo $content_SQLinsert.'<br/>';
+									//$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
 								}
+							} else if(($PT[$j] == "LS") && ($CT[$k] == "V")) {
+								for($l=0; $l<sizeof($CTLSV); $l++) {
+									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, LSV, filename, active)";
+									$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$CTLSV[$l]."', '".$filename."', '1')";
+									echo $content_SQLinsert.'<br/>';
+									//$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
+								}
+							} else {
+								$content_SQLinsert = "INSERT INTO files (MA, PT, CT, filename, active)";
+								$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$filename."', '1')";
+								echo $content_SQLinsert.'<br/>';
+								//$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
 							}
-						} 
-					} else {
-						echo "DB connect failed";
+						}
 					}
-				} else {
-					echo 'Content type cannot be empty.';
 				}
-			} else {
-				echo 'Product type cannot be empty';
 			}
-		} else {
-			echo 'Market area cannot be empty.';
-		}
+	//	}
 
 		//header("Location: uploadContent.php?saved=1");
 

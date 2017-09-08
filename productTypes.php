@@ -39,7 +39,7 @@
 			      				} else {
 			      					echo '
 			      					<tr>
-					      				<td><a id="productTypeC" href="contentTypes.php?market='.$market.'&productType=C">C</a></td>
+					      				<td><a id="productTypeC" href="showContent.php?market='.$market.'&productType=C">C</a></td>
 					      				<td></td>
 					      			</tr>
 					      			';
