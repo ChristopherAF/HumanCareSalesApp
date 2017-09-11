@@ -20,7 +20,11 @@
 					}
 				?>
 				<form name="uploadContentForm" action="uploadContentHandling.php" method="post" enctype="multipart/form-data">
+					<p>File to upload</p>
 		      		<input type="file" name="uploadedFile">
+		      		<p>Icon for file</p>
+		      		<input type="file" name="uploadedFileIcon">
+
 		      		<div id="divMA" style="background-color: gray;">
 				      	<input type="checkbox" name="market[]" id="US" onclick="showDiv('divPT','market[]')" value="US"><p>US</p>
 				      	<input type="checkbox" name="market[]" id="NL" onclick="showDiv('divPT','market[]')" value="NL"><p>NL</p>
