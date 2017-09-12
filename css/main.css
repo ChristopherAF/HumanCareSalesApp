@@ -1,0 +1,58 @@
+div.contentDivNav{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.circle-text {
+    width:45%;
+    float: left;
+    padding: 5% 5% 0 5%;
+}
+
+.even{
+	margin-right: 5%;
+}
+
+.circle-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #a2d108; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+
+.circle-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+    font-size: 190%;
+    font-weight: bold;
+}
+
+.cicleContainer{
+	clear: both;
+	margin: 0 auto;
+}
+
+
+
+.icon-container{
+    width: 50%;
+    padding: 10%;
+    float: left;
+    text-align: center;
+}
+
+/*
+.link-btn{
+	color:#FFF; 
+}
+*/
