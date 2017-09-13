@@ -44,7 +44,7 @@ function showDiv (box,cbname) {
     	}
     }
 
-    // Make subcategory visable if checked.
+    // Make subcategory visible if checked.
     for(var i=0; i<chboxs.length; i++) {
     	if(chboxs[i].checked) {
     		if(chboxs[i].value !== "C") { //Lockes checkboxes on submenues
@@ -55,7 +55,7 @@ function showDiv (box,cbname) {
 
     // Special subcategorys
     if((document.getElementById("NL").checked == true) || document.getElementById("CA").checked == true) {
-    	visBS = "block";
+    	visBS = "inline-block";
     }
 
     if(document.getElementById("MA").checked || document.getElementById("LS").checked || document.getElementById("HB").checked || document.getElementById("CC").checked) {
