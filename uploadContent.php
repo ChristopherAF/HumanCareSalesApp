@@ -15,8 +15,10 @@
 			</div>
 			<div class="contentDiv">
 				<?php 
-					if(@$_GET['saved']==1) {
+					if(@$_GET['saved']=='1') {
 						echo '<h4>File saved.</h4>';
+					} else if (@$_GET['saved']=='0') {
+						echo "<script type='text/javascript'>alert('Fil måste väljas.');</script>";
 					}
 				?>
 				<form name="uploadContentForm" action="uploadContentHandling.php" method="post" enctype="multipart/form-data">
