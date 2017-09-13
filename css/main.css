@@ -1,16 +1,69 @@
-div.contentDivNav{
+ div.contentDivNav{
 	width: 50%;
 	margin: 0 auto;
+	font-family: calibri, sans-serif;
+	margin-bottom: 20%;
+	}
+
+
+.container-img-text{
+	width:45%;
 }
 
-.circle-text {
+.img-placeholder{
+	/* width:45%; */
+	float:left;
+	margin-bottom: 15%;
+	height: 70px;
+	width:125px;
+	margin-right: 25px;
+}
+
+
+@media screen and (max-width: 991px) {  
+	.img-placeholder{
+	height: auto;
+	width:70%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.img-placeholder{
+	width:45%;
+	height: auto;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.img-placeholder{
+	min-width:45%;
+	height: auto;
+	}
+
+
+
+/*
+.img-placeholder img{
+    width: 100%;
+    height: auto;
+
+}
+*/
+
+/* circle background */
+
+
+.circle-text, .label-text {
     width:45%;
     float: left;
-    padding: 5% 5% 0 5%;
 }
 
 .even{
 	margin-right: 5%;
+}
+
+.circle-text{
+	 padding: 5% 5% 0 5%;
 }
 
 .circle-text:after {
@@ -19,21 +72,29 @@ div.contentDivNav{
     width: 100%;
     height:0;
     padding-bottom: 100%;
-    background: #a2d108; 
+    /* background: #a2d108; */
+    background: #FFF; 
     -moz-border-radius: 50%; 
     -webkit-border-radius: 50%; 
     border-radius: 50%;
+    border: solid 0.25em #777;
+
+}
+
+
+div.contentDivNav{
+	margin-bottom: 20%;
 }
 
 .circle-text div {
     float:left;
     width:100%;
-    padding-top:50%;
+    padding-top:54%;
     line-height:1em;
     margin-top:-0.5em;
     text-align:center;
-    color:white;
-    font-size: 190%;
+	color: #777;
+	font-size: 150%;
     font-weight: bold;
 }
 
@@ -42,13 +103,61 @@ div.contentDivNav{
 	margin: 0 auto;
 }
 
+.label-text{
+	text-align: center;
+	position: relative;
+    margin-top: 2%;
+}
+
+.label-text span{
+	background-color: #a2d108;
+	color:#FFF;
+	padding:3%;
+	font-weight: bold;
+	font-size: 80%;
+}
+
+.clear-element{
+	clear: left;
+}
 
 
-.icon-container{
-    width: 50%;
-    padding: 10%;
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0.2em;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#uploadedFile{
+	border: solid 0.1em #a2d108;
+	background-color:#FFF; 
+	width: 79%;
     float: left;
-    text-align: center;
+    padding-left: 1%;
+}
+
+.btn-sample { 
+  color: #FFFFFF; 
+  background-color: #A2D108; 
+  border-color: #A2D108; 
+  font-weight: bold;
+  float: right;
+  width:18%;
+}
+
+.btn-container{
+	margin-bottom: 2%;
 }
 
 /*
