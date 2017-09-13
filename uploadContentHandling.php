@@ -1,7 +1,8 @@
 <?php
-	
-	if (isset($_FILES['uploadedFile'])) {
-		$filename = $_FILES['uploadedFile']['name'];
+	$filename = $_FILES['uploadedFile']['name'];
+
+	if ($filename != '') {
+		
 		move_uploaded_file($_FILES['uploadedFile']['tmp_name'], "files/".$filename);
 
 		include('config/dbConfig.php'); 
@@ -15,11 +16,9 @@
 		$CTLSMS = @$_POST['contentTypeLSMS'];
 		$CTLSV = @$_POST['contentTypeLSV'];
 
-		if($filename !== '') {
-			if(isset($_FILES['uploadedFileIcon'])) {
-				$iconFilename = $_FILES['uploadedFileIcon']['name'];
-				move_uploaded_file($_FILES['uploadedFileIcon']['tmp_name'], "files/".$iconFilename);
-			}
+		if(isset($_FILES['uploadedFileIcon'])) {
+			$iconFilename = $_FILES['uploadedFileIcon']['name'];
+			move_uploaded_file($_FILES['uploadedFileIcon']['tmp_name'], "files/".$iconFilename);
 
 			if($dbConnected) {
 				for($i=0; $i<sizeof($MA); $i++) {
@@ -35,7 +34,7 @@
 							if(($PT[$j] == "LS") && ($CT[$k] == "MS")) {
 								for($l=0; $l<sizeof($CTLSMS); $l++) {
 									echo 'Loop 2<br/>';
-									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, LSMS, filename, iconFilename, active)";
+									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, CTLSMS, filename, iconFilename, active)";
 									$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$CTLSMS[$l]."', '".$filename."', '".$iconFilename."', '1')";
 									echo $content_SQLinsert.'<br/>';
 									$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
@@ -43,14 +42,22 @@
 							} else if(($PT[$j] == "LS") && ($CT[$k] == "V")) {
 								for($l=0; $l<sizeof($CTLSV); $l++) {
 									echo 'Loop 3<br/>';
-									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, LSV, filename, iconFilename, active)";
+									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, CTLSV, filename, iconFilename, active)";
 									$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$CTLSV[$l]."', '".$filename."', '".$iconFilename."', '1')";
+									echo $content_SQLinsert.'<br/>';
+									$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
+								}
+							} else if ($PT[$j] == "BS") {
+								if(($CT[$k] == "MS") || ($CT[$k] == "PL")) {
+									echo 'Loop 4</br>';
+									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, filename, iconFilename, active)";
+									$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$filename."', '".$iconFilename."', '1')";
 									echo $content_SQLinsert.'<br/>';
 									$content_SQLinsert_query = mysqli_query($dbConnected, $content_SQLinsert);
 								}
 							} else {
 								if($PT[$j] != "C") {
-									echo 'Loop 4<br/>';
+									echo 'Loop 5<br/>';
 									$content_SQLinsert = "INSERT INTO files (MA, PT, CT, filename, iconFilename, active)";
 									$content_SQLinsert .= "VALUES ('".$MA[$i]."', '".$PT[$j]."', '".$CT[$k]."', '".$filename."', '".$iconFilename."', '1')";
 									echo $content_SQLinsert.'<br/>';
@@ -61,12 +68,10 @@
 					}
 				}
 			}
-		}
-
-		header("Location: uploadContent.php?saved=1");
-
+			//header("Location: uploadContent.php?saved=1");
+		} 
 	} else {
-		echo "No file uploaded.";
+		header("Location: uploadContent.php?saved=0");
 	}
 
 ?>

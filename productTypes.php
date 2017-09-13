@@ -1,53 +1,93 @@
 <?php
 
-	$market = @$_GET['market'];
+	$market = @$_POST['market'];
 
-	echo $market;
+?>
 
-	echo '
-	<!DOCTYPE html>
-		<html>
-			<head>
-				<title>Human Care Sales App</title>
-				<meta charset="utf-8">
-				<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />	
-				<script type="text/javascript" src="config/jquery.min.js"></script>
-				<script type="text/javascript" src="config/bootstrap.js"></script>
-			</head>
-			<body>
-				<div class="container">
-					<div class="topDiv">
-						<img src="images/logo/headerlogo.png">
-					</div>
-					<div class="contentDiv">
-			      		<table>
-			      			<tr>
-			      				<td><a id="productTypeMA" href="contentTypes.php?market='.$market.'&productType=MA">MA</a></td>
-			      				<td><a id="productTypeLS" href="contentTypes.php?market='.$market.'&productType=LS">LS</a></td>
-			      			</tr>
-			      			<tr>
-			      				<td><a id="productTypeHB" href="contentTypes.php?market='.$market.'&productType=HB">HB</a></td>
-			      				<td><a id="productTypeCC" href="contentTypes.php?market='.$market.'&productType=CC">CC</a></td>
-			      			</tr>';
-			      				if($market == 'CA' || $market == 'NL') {
-			      					echo '
-			      					<tr>
-			      						<td><a id="productTypeBS" href="contentTypes.php?market='.$market.'&productType=BS">BS</a></td>
-					      				<td><a id="productTypeC" href="contentTypes.php?market='.$market.'&productType=C">C</a></td>
-					      			</tr>
-			      					';
-			      				} else {
-			      					echo '
-			      					<tr>
-					      				<td><a id="productTypeC" href="showContent.php?market='.$market.'&productType=C">C</a></td>
-					      				<td></td>
-					      			</tr>
-					      			';
-			      				}
-			      		echo '
-			      		</table>
-			      	</div>
+<!DOCTYPE html>
+	<html manifest="hcsa.appcache">
+		<head>
+			<title>Human Care Sales App</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />	
+			<script type="text/javascript" src="config/jquery.min.js"></script>
+			<script type="text/javascript" src="config/bootstrap.js"></script>
+		</head>
+		<body>
+			<div class="container">
+				<div class="topDiv">
+					<img src="images/logo/headerlogo.png">
 				</div>
-			</body>
-		</html>
-		';
+				<div class="contentDiv">
+					<div class="contentDiv contentDivNav">
+						<div class="container-img-text">
+							<div class="img-placeholder">
+								<form id="productTypesMA" action="contentTypes.php" method="post">
+									<input type="hidden" name="market" value="<?php echo $market; ?>">
+									<input type="hidden" name="productType" value="MA">
+									<input type="image" name="buttonMA" src="" placeholder="Mobility Aids">
+								</form>
+								<div>Mobility Aids</div>
+							</div>
+						</div>
+						<div class="container-img-text">
+							<div class="img-placeholder">
+								<form id="productTypesLS" action="contentTypes.php" method="post">
+									<input type="hidden" name="market" value="<?php echo $market; ?>">
+									<input type="hidden" name="productType" value="LS">
+									<input type="image" name="buttonLS" src="" placeholder="Lifting Solutions">
+								</form>
+								<div>Lifting Solutions</div>
+							</div>
+						</div>
+						<div class="container-img-text">
+							<div class="img-placeholder">
+								<form id="productTypesHB" action="contentTypes.php" method="post">
+									<input type="hidden" name="market" value="<?php echo $market; ?>">
+									<input type="hidden" name="productType" value="HB">
+									<input type="image" name="buttonHB" src="" placeholder="Healtcare Beds">
+								</form>
+								<div>Healthcare Beds</div>
+							</div>
+						</div>
+						<div class="container-img-text">
+							<div class="img-placeholder">
+								<form id="productTypesCC" action="contentTypes.php" method="post">
+									<input type="hidden" name="market" value="<?php echo $market; ?>">
+									<input type="hidden" name="productType" value="CC">
+									<input type="image" name="buttonCC" src="" placeholder="Convertible Chairs">
+								</form>
+								<div>Convertible Chairs</div>
+							</div>
+						</div>
+						<?php
+							if(($market == 'CA') || ($market == 'NL')) {
+								echo '
+									<div class="container-img-text">
+										<div class="img-placeholder">
+											<form id="productTypesBS" action="contentTypes.php" method="post">
+												<input type="hidden" name="market" value="<?php echo $market; ?>">
+												<input type="hidden" name="productType" value="BS">
+												<input type="image" name="buttonBS" src="" placeholder="Bathroom Safety">
+											</form>
+											<div>Bathroom Safety</div>
+										</div>
+									</div>
+								';
+							}
+						?>						
+						<div class="container-img-text">
+							<div class="img-placeholder">
+								<form id="productTypesC" action="showContent.php" method="post">
+									<input type="hidden" name="market" value="<?php echo $market; ?>">
+									<input type="hidden" name="productType" value="C">
+									<input type="image" name="buttonC" src="" placeholder="Corporate">
+								</form>
+								<div>Corporate</div>
+							</div>
+						</div>
+					</div>
+		      	</div>
+			</div>
+		</body>
+	</html>
