@@ -29,112 +29,43 @@
 	min-width: 15%;
 }
 
- .contentDiv{
+.contentDiv{
  	padding-top: 1%;
  }
 
+.row{
+	margin-bottom: 10%;
+}
 
-/*
- div.contentDivNav{
-	width: 50%;
-	margin: 0 auto;
+.contentDiv{
 	font-family: calibri, sans-serif;
-	margin-bottom: 20%;
-	}
-*/
-
-.container-img-text{
-	width:45%;
 }
 
-.img-placeholder{
-	/* width:45%; */
-	float:left;
-	margin-bottom: 15%;
-	height: 70px;
-	width:125px;
-	margin-right: 25px;
-}
-
-
-
-/*
-.img-placeholder img{
-    width: 100%;
-    height: auto;
-
-}
-*/
-
-/* circle background */
-
-
-.circle-text, .label-text {
-    width:45%;
-    float: left;
-}
-
-.even{
-	margin-right: 5%;
-}
-
-.circle-text{
-	 padding: 5% 5% 0 5%;
-}
-
-.circle-text:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height:0;
-    padding-bottom: 100%;
-    /* background: #a2d108; */
-    background: #FFF; 
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
-    border: solid 0.25em #777;
-
-}
-
-
-div.contentDivNav{
-	margin-bottom: 20%;
-}
-
-.circle-text div {
-    float:left;
-    width:100%;
-    padding-top:54%;
-    line-height:1em;
-    margin-top:-0.5em;
-    text-align:center;
-	color: #777;
-	font-size: 150%;
-    font-weight: bold;
-}
-
-.cicleContainer{
-	clear: both;
-	margin: 0 auto;
-}
-
-.label-text{
+.row{
 	text-align: center;
-	position: relative;
-    margin-top: 2%;
 }
 
-.label-text span{
-	background-color: #a2d108;
-	color:#FFF;
-	padding:3%;
-	font-weight: bold;
-	font-size: 80%;
+@media (min-width: 992px)
+{.container {
+    width: 50%;
+}}
+
+div.div-placeholder{
+ 	padding-right: 1%;
+    padding-left: 1%;
+    width: 34%;
+    min-width: 34%;
+    max-width: 34%;
+    float: left;
+    margin: 3% 8% 0 8%;
 }
 
-.clear-element{
-	clear: both;
+
+div.div-placeholder form input[type="image"]{
+	width: 100%;
 }
 
-
+h3, h4{
+	color:#777777;
+	margin-top: 1%;
+}

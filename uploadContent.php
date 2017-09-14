@@ -13,12 +13,17 @@
 		<div class="container">
 		<div class="topDiv"><img src="images/logo/headerlogo.png"></div>
 		<div class="contentDiv">
-
 				<?php 
 					if(@$_GET['saved']=='1') {
-						echo '<div class="alert alert-success" role="alert">File saved.</div>';
+						echo '
+					<div class="alert alert-success" role="alert">
+  						File saved.
+  					</div>';
 					} else if (@$_GET['saved']=='0') {
-						echo "<script type='text/javascript'>alert('Fil måste väljas.');</script>";
+						echo '<div class="alert alert-danger" role="alert">
+  						<span class="sr-only">Error:</span>
+  						No file choosen.
+						</div>';
 					}
 				?>
 		<form name="uploadContentForm" action="uploadContentHandling.php" method="post" enctype="multipart/form-data">
@@ -27,7 +32,7 @@
 	    	<input type="file" name="uploadedFile" class="form-control" placeholder="Choose file to upload">
 	  	</div>
 		<div class="form-group">
-	    <h3>Icon for file</h3>
+	    <h3>Thumbnail for file (optional)</h3>
 	    <input type="file" name="uploadedFileIcon" class="form-control" placeholder="Choose icon to upload">
 	  	</div>
 		<ul class="list-group">

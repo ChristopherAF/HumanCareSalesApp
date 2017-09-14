@@ -1,9 +1,5 @@
-		<?php
-
-		?>
-
 		<!DOCTYPE html>
-		<html>
+		<html manifest="hcsa.appcache">
 		<head>
 			<title>Human Care Sales App</title>
 			<meta charset="utf-8">
@@ -11,101 +7,67 @@
 			<link rel="stylesheet" href="css/main.css" type="text/css" />	
 			<script type="text/javascript" src="config/jquery.min.js"></script>
 			<script type="text/javascript" src="config/bootstrap.js"></script>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 		</head>
 		<body>
 			<div class="container">
-				<div class="topDiv">
-					<img src="images/logo/headerlogo.png">
+			<div class="topDiv"><img src="images/logo/headerlogo.png"></div>
+			
+			<div class="contentDiv">
+			
+			<div class="row">
+				<div class="div-placeholder">	
+  					<form id="marketUS" action="productTypes.php" method="post">
+								<input type="hidden" name="market" value="US">
+								<input type="image" name="buttonUS" src="images/countries/us.png" placeholder="United States">
+					</form>
+					<h3>United States</h3>
 				</div>
-				<div class="contentDiv contentDivNav">
 				
-					<div class="container-img-text">
-						<div class="img-placeholder">
-							<a id="marketUS" href="productTypes.php?market=US">
-								<img  src="images/countries/us.png">
-							</a>
-							<div>US</div>
-						</div>
-						<div class="img-placeholder">
-							<a id="marketNL" href="productTypes.php?market=NL">
-								<img  src="images/countries/nl.png">	
-							</a>
-							<div>NL</div>
-						</div>
-						
-					</div>
-
-					<div class="container-img-text">
-						<div class="img-placeholder">
-							<a id="marketSE" href="productTypes.php?market=SE">
-								<img  src="images/countries/se.png">
-								<div>SE</div>
-							</a>
-						</div>
-						<div class="img-placeholder">
-							<a id="marketCA" href="productTypes.php?market=CA">
-								<img  src="images/countries/ca.png">
-								<div>CA</div>
-							</a>
-						</div>
-					</div>
-					<div class="container-img-text">
-						<div class="img-placeholder">
-							<a id="marketAU" href="productTypes.php?market=AU">
-								<img  src="images/countries/au.png">
-								<div>AU</div>
-							</a>
-						</div>
-						<div class="img-placeholder">
-							<a id="marketOM" href="productTypes.php?market=OM">
-								<img class="img-responsive img-circle" src="images/countries/om.png">
-								<div>OM</div>
-							</a>
-						</div>						
-					</div>
-
-							<!--
-
-					<div class="cicleContainer">
-						<div class="img-placeholder even">
-							<a id="marketUS" href="productTypes.php?market=US">
-								<img  src="images/countries/us.png">
-								<div>US</div>
-							</a>
-						</div>
-						<div class="img-placeholder">
-							<a id="marketNL" class="link-btn" href="productTypes.php?market=NL">
-								<div>NL</div>
-							</a>
-						</div>
-					</div>
-					<div class="cicleContainer">
-						<div class="img-placeholder even">
-							<a id="marketSE" class="link-btn" href="productTypes.php?market=SE">
-								<div>SE</div>
-							</a>
-						</div>
-						<div class="img-placeholder">
-							<a id="marketCA" class="link-btn" href="productTypes.php?market=CA">
-								<div>CA</div>
-							</a>
-						</div>
-					</div>
-					<div class="cicleContainer">	
-						<div class="img-placeholder even">
-							<a id="marketAU" class="link-btn" href="productTypes.php?market=AU">
-								<div>AU</div>
-							</a>
-						</div>
-						<div class="img-placeholder">
-							<a id="marketOM" class="link-btn" href="productTypes.php?market=OM">
-								<div>OM</div>
-							</a>
-						</div>
-					</div>
-					-->
-
+				<div class="div-placeholder">	
+  					<form id="marketNL" action="productTypes.php" method="post">
+								<input type="hidden" name="market" value="NL">
+								<input type="image" name="buttonNL" src="images/countries/nl.png" placeholder="Netherlands">
+					<h3>Netherlands</h3>
+					</form>
 				</div>
-			</div>
+			
+				<div class="div-placeholder">
+  					<form id="marketSE" action="productTypes.php" method="post">
+								<input type="hidden" name="market" value="SE">
+								<input type="image" name="buttonSE" src="images/countries/se.png" placeholder="Sweden">
+					<h3>Sweden</h3>
+					</form>
+				</div>
+			
+				<div class="div-placeholder">
+  					<form id="marketCA" action="productTypes.php" method="post">
+								<input type="hidden" name="market" value="CA">
+								<input type="image" name="buttonCA" src="images/countries/ca.png" placeholder="Canada">
+					<h3>Canada</h3>
+					</form>
+				</div>
+	
+				<div class="div-placeholder">
+  					<form id="marketAU" action="productTypes.php" method="post">
+								<input type="hidden" name="market" value="AU">
+								<input type="image" name="buttonAU" src="images/countries/au.png" placeholder="Australia">
+					<h3>Australia</h3>
+					</form>
+				</div>
+
+				<div class="div-placeholder">
+  					<form id="marketOM" action="productTypes.php" method="post">
+								<input type="hidden" name="market" value="OM">
+								<input type="image" name="buttonOM" src="images/countries/om.png" placeholder="Other Markets">
+					<h3>Other Markets</h3>
+					</form>
+				</div>
+			</div><!-- end row -->
+			
+
+			</div><!-- end  contentDiv -->
+			</div><!-- end  container -->
+
 		</body>
 		</html>
