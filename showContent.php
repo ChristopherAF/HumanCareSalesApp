@@ -34,7 +34,7 @@
 						<script type="text/javascript" src="config/jquery.min.js"></script>
 						<script type="text/javascript" src="config/bootstrap.js"></script>
 						<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+						<meta name="viewport" content="width=device-width, initial-scale=1">
 					</head>
 					<body>
 						<div class="container">

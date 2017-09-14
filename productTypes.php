@@ -9,7 +9,7 @@
 		<head>
 			<title>Human Care Sales App</title>
 			<meta charset="utf-8">
-			<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />	
+			<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
 			<link rel="stylesheet" href="css/main.css" type="text/css" />
 			<script type="text/javascript" src="config/jquery.min.js"></script>
 			<script type="text/javascript" src="config/bootstrap.js"></script>
