@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html manifest="hcsa.appcache">
+<html>
 	<head>
 		<title>Human Care Sales App</title>
 		<meta charset="utf-8">
