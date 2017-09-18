@@ -4,7 +4,7 @@
 	$productType = @$_POST['productType'];
 	$contentType = @$_POST['contentType'];
 	$contentTypeLS = @$_POST['contentTypeLS'];
-
+	
 	include('config/dbConfig.php');
 	$dbSuccess = false;
 	$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
@@ -24,26 +24,6 @@
 
 		$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
-		echo '
-			<!DOCTYPE html>
-				<html>
-					<head>
-						<title>Human Care Sales App</title>
-						<meta charset="utf-8">
-						<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />	
-						<script type="text/javascript" src="config/jquery.min.js"></script>
-						<script type="text/javascript" src="config/bootstrap.js"></script>
-						<link rel="stylesheet" href="css/main.css" type="text/css" />
-						<meta name="viewport" content="width=device-width, initial-scale=1">
-					</head>
-					<body>
-						<div class="container">
-							<div class="topDiv">
-								<img src="images/logo/headerlogo.png">
-							</div>
-							<div class="contentDiv">
-		';
-
 		while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
 			$MA = $row['MA'];
 			$PT = $row['PT'];
@@ -53,15 +33,12 @@
 			$filename = $row['filename'];
 			$iconFilename = $row['iconFilename'];
 
-			echo '<a href="files/'.$filename.'"><img src="files/'.$iconFilename.'"/></a>';
+			echo '<div class="div-placeholder">	
+					<a href="files/'.$filename.'">
+  					<img src="files/'.$iconFilename.'" />
+  					</a>
+				</div>';
 		}
-
-		echo '
-					      	</div>
-						</div>
-					</body>
-				</html>
-		';
 	}
 
 ?>

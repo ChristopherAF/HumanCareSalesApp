@@ -3,8 +3,7 @@
 	var contentType = "";
 	var contentTypeLS ="";
 
-$(document).ready(function() {
-				
+$(document).ready(function() {	
 					// handles market buttons
     				$("[name ='market_btn']").click(function(event) {
         				market = this.id;
@@ -62,7 +61,6 @@ $(document).ready(function() {
 						$("#LSsubContentMarketing").hide();
 						$("#LSsubContentVideo").hide();
 						showResults();//hide content types
-
     				});
     				
 					// Reset all choices
@@ -86,12 +84,38 @@ $(document).ready(function() {
     				}
 
     				function showResults(){
+    					$("#hide").show();
+						$("#productTypes").hide();
+						$("#contentTypes").hide();
+						$("#LSsubContentMarketing").hide();
+						$("#LSsubContentVideo").hide();
     					$("#resultContainer").show();
+    					
+    					
     					$("#titleResult").text("Content found for "
     						+market 
     						+" "+productType
     						+" "+contentType
     						+" "+contentTypeLS);
-    					console.log("Market:"+market+" ,productType:"+productType+" ,contentType:"+contentType+" ,contentTypeLS:"+contentTypeLS);
+    					
+    					getContent();	
     				}
 });
+
+function getContent(){
+	
+	$.post("showContent.php",
+    						{ 
+    						 market: market,
+    						 productType: productType,
+    						 contentType: contentType,
+    						 contentTypeLS: contentTypeLS }
+    ).done(function(data) {
+    	var content = $("#resultDiv");
+    	if(data == ""){
+    		content.empty().append("No document found.");
+    	}else{
+			content.empty().append(data);
+    	}
+		});
+};
