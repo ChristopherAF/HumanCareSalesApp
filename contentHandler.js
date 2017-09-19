@@ -2,6 +2,7 @@
 	var productType = "";
 	var contentType = "";
 	var contentTypeLS ="";
+	var numberResult = 0;
 
 $(document).ready(function() {	
 					// handles market buttons
@@ -74,6 +75,7 @@ $(document).ready(function() {
 						productType = "";
 						contentType = "";
 						contentTypeLS ="";
+						numberResult = 0;
 						
 						$("#market").show();
 						$("#productTypes").hide();
@@ -81,10 +83,12 @@ $(document).ready(function() {
 						$("#LSsubContentMarketing").hide();
 						$("#LSsubContentVideo").hide();
 						$("#resultContainer").hide();
+
+						$("#resultContainer").children("div").hide();
     				}
 
     				function showResults(){
-    					$("#hide").show();
+    					$("#market").hide();
 						$("#productTypes").hide();
 						$("#contentTypes").hide();
 						$("#LSsubContentMarketing").hide();
@@ -92,30 +96,35 @@ $(document).ready(function() {
     					$("#resultContainer").show();
     					
     					
-    					$("#titleResult").text("Content found for "
+    					$("#titleResult").text("Search result for "
     						+market 
     						+" "+productType
     						+" "+contentType
     						+" "+contentTypeLS);
+	
+
+    					$("div[name*=resultBox]").each(function(index) {
+  							var str = $(this).children('span').text();
+			
+    						if ((str.indexOf(market) >= 0)
+    						&& (str.indexOf(productType) >= 0)
+    						&& (str.indexOf(contentTypeLS) >= 0)
+    							)
+
+    						{
+    								//console.log($(this).text()); 
+    								$(this).closest('div').show();
+    								numberResult++;
+    						};
+	
+						});
+
+						var numberResultTitle = $("#titleResultNumber");
+    						if(numberResult == 0){
+    							numberResultTitle.empty().append("0 document found.");
+    						}else{
+								numberResultTitle.empty().append(numberResult+" document(s) found.");
+    						}
     					
-    					getContent();	
     				}
 });
-
-function getContent(){
-	
-	$.post("showContent.php",
-    						{ 
-    						 market: market,
-    						 productType: productType,
-    						 contentType: contentType,
-    						 contentTypeLS: contentTypeLS }
-    ).done(function(data) {
-    	var content = $("#resultDiv");
-    	if(data == ""){
-    		content.empty().append("No document found.");
-    	}else{
-			content.empty().append(data);
-    	}
-		});
-};
