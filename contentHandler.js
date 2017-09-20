@@ -108,6 +108,7 @@ $(document).ready(function() {
 			
     						if ((str.indexOf(market) >= 0)
     						&& (str.indexOf(productType) >= 0)
+    						&& (str.indexOf(contentType) >= 0)
     						&& (str.indexOf(contentTypeLS) >= 0)
     							)
 
