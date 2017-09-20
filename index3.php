@@ -28,45 +28,43 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1">
 			</head>
 			<body>
-
+				<div class="topDiv">
+						<img src="images/logo/headerlogo.png">
+				</div>
+				<div class="contentDiv">
 				<div class="container">
-					<div class="topDiv">
-						<img src="images/logo/headerlogo.png"></div>
-
-					<div class="contentDiv">
-
 						<div class="row" id="market">
-							<div class="div-placeholder">	
+							<div class="div-placeholder flag">	
 								<button id="US" name="market_btn" class="btn_img" />
 								<img src="images/countries/us.png" />
 								<h3>United States</h3>
 							</div>
 
-							<div class="div-placeholder">	
+							<div class="div-placeholder  flag">	
 								<button id="NL" name="market_btn" class="btn_img"/>
 								<img src="images/countries/nl.png" />
 								<h3>Netherlands</h3>
 							</div>
 
-							<div class="div-placeholder">
+							<div class="div-placeholder  flag">
 								<button id="SE" name="market_btn" class="btn_img"/>
 								<img src="images/countries/se.png" />
 								<h3>Sweden</h3>
 							</div>
 
-							<div class="div-placeholder">
+							<div class="div-placeholder  flag">
 								<button id="CA" name="market_btn" class="btn_img"/>
 								<img src="images/countries/ca.png" />
 								<h3>Canada</h3>
 							</div>
 
-							<div class="div-placeholder">
+							<div class="div-placeholder  flag">
 								<button id="AU" name="market_btn" class="btn_img"/>
 								<img src="images/countries/au.png" />
 								<h3>Australia</h3>
 							</div>
 
-							<div class="div-placeholder">
+							<div class="div-placeholder  flag">
 								<button id="OM" name="market_btn" class="btn_img"/>
 								<img src="images/countries/om.png" />
 								<h3>Other Markets</h3>
@@ -212,8 +210,8 @@
 
 							?>
 						</div><!-- end row -->
-					</div><!-- end  contentDiv -->
 				</div><!-- end  container -->
+				</div><!-- end  contentDiv -->
 			</body>
 			<script  type="text/javascript" src="contentHandler.js"></script>
 			</html>
