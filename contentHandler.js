@@ -112,8 +112,7 @@ $(document).ready(function() {
     						&& (str.indexOf(contentTypeLS) >= 0)
     							)
 
-    						{
-    								//console.log($(this).text()); 
+    						{ 
     								$(this).closest('div').show();
     								numberResult++;
     						};

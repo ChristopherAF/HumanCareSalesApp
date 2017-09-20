@@ -32,7 +32,6 @@
  }
 
 .row{
-	margin-bottom: 10%;
 	text-align: center;
 }
 
@@ -52,16 +51,22 @@ div.topDiv{
 div.contentDiv{
 	font-family: calibri, sans-serif;
 	z-index: 1;
-	margin-top:3vw;
+	margin-top:5vw;
 }
 
 #resultContainer{
 	margin-top:12vw;
 }
 
+@media screen and (min-width: 1401px)
+{
+	img.delete-img{
+		width: 200px;
+		height: 200px;
+	}
+}
 
-
-@media (min-width: 801px)
+@media screen and (max-width: 1400px)
 {
 	.container {
     	width: 65%;
@@ -72,23 +77,38 @@ div.contentDiv{
 	}
 
 	#resultContainer {
-    margin-top: 6vw;
+    	margin-top: 6vw;
 	}
 
 	h3, h4 {
-    color: #777777;
-    margin-top: -1%;
+    	color: #777777;
+   	 	margin-top: -1%;
+	}
+
+	img.delete-img{
+		width: 150px;
+		height: 150px;
+	}
+
+	.row{
+		margin-bottom: 2%;
+		margin-top: 5%;
 	}
 }
 
-@media (max-width:800px)
+@media screen and (max-width:800px)
 {
+	.row{
+		margin-bottom: 8%;
+		margin-top: 16%;
+	}
+
 	.topDiv img{
 		width:30%;
 	}
 
 	h3{
-	font-size:1.5em;
+	font-size:1em;
 		margin-top: 0;
 	}
 
@@ -104,12 +124,23 @@ div.contentDiv{
 		margin-top:12vw;
 	}
 
+	img.delete-img{
+		width: 100px;
+		height: 100px;
+	}
+
 }
 
 @media (max-width:440px)
 {
+
+	.row{
+		margin-bottom: 8%;
+		margin-top: 12%;
+	}
+
 	h3{
-	font-size:1em;
+	font-size:0.8em;
 	}
 
 	div#resultContainer .div-placeholder {
@@ -119,7 +150,25 @@ div.contentDiv{
 	#resultContainer{
 		margin-top:12vw;
 	}
+
+	img.delete-img{
+		width: 100px;
+		height: 100px;
+	}
 }
+
+@media (max-width:370px)
+{
+
+	h3{
+		font-size:0.5em;
+		margin-top: 0;
+	}
+
+	.row{
+		margin-bottom: 8%;
+	}
+}	
 
 div.div-placeholder{
  	padding-right: 1%;
@@ -169,4 +218,31 @@ h3, h4{
 
 div.container div#market div.flag{
 	margin-top:5vw;
+}
+
+div.contentDiv input[type="submit"].submit-style{
+	width: 40%;
+	margin-bottom: 10%;
+}
+
+div.table-responsive{
+	margin-top: 3%;
+}
+
+.table>tbody>tr>td{
+	padding:0 0 0 1%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.table>tbody>tr>td.align-left{
+	text-align: left;
+}
+
+.table>tbody>tr>td.check-box-manage{
+	padding-left:0;
+}
+
+.btn-holder{
+	text-align: right;
 }
