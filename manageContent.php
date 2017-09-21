@@ -44,7 +44,7 @@
 								<img src="images/logo/headerlogo.png">
 							</div>
 							<div class="contentDiv" id="admin">';
-							include('../navigation.php');
+							include('navigation.php');
 							echo '	
 								<div class="form-group">
 								<h3>Choose which files you would like to delete:</h3></div>
