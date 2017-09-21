@@ -34,9 +34,9 @@
 				<?php 
 					if(@$_GET['saved']=='1') {
 						echo '
-					<div class="alert alert-success" role="alert">
-  						File saved.
-  					</div>';
+						<div class="alert alert-success" role="alert">
+	  						File saved.
+	  					</div>';
 					} else if (@$_GET['saved']=='0') {
 						echo '<div class="alert alert-danger" role="alert">
   						<span class="sr-only">Error:</span>

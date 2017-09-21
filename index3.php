@@ -1,5 +1,5 @@
 			<!DOCTYPE html>
-			<html manifest="hcsa.appcache">
+			<html>
 			<head>
 				<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
 				<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -185,7 +185,7 @@
 							mysqli_set_charset($dbConnected, 'utf8');
 
 							if ($dbConnected) {
-								$content_SQLselect = "SELECT * FROM files";
+								$content_SQLselect = "SELECT * FROM files WHERE active='1'";
 								$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
 								while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
