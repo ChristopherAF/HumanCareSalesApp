@@ -43,7 +43,9 @@
 							<div>
 								<img src="images/logo/headerlogo.png">
 							</div>
-							<div class="contentDiv">	
+							<div class="contentDiv" id="admin">';
+							include('../navigation.php');
+							echo '	
 								<div class="form-group">
 								<h3>Choose which files you would like to delete:</h3></div>
 
@@ -105,6 +107,31 @@
 						</div>
 					</body>
 				</html>
+				<script  type="text/javascript" src="handleNavigation.js"></script>
+				<script >
+					// Check file is selected before POST form
+					$( document ).ready(function() {
+						$(".alert-success").hide();
+						$(".alert-danger").hide();
+
+						$("#deleteForm").on("submit",function() { 
+   						if ($("#deleteForm input:checkbox:checked").length > 0)
+							{
+								$(".alert-danger").hide();
+								$(".alert-success").show();
+								return true;
+							}
+							else
+							{
+   							// none is checked
+								$(".alert-success").hide();
+								$(".alert-danger").show();
+   								alert("No file selected.");
+   								return false;
+							}	
+					});		
+				});
+				</script>
 		';
 		
 	}
