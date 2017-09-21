@@ -30,11 +30,10 @@
 		<body>
 		<div class="container">
 		<div><img src="images/logo/headerlogo.png"></div>
-		<div class="contentDiv">
+		<div class="contentDiv" id="admin">
 				<?php 
 					if(@$_GET['saved']=='1') {
-						echo '
-					<div class="alert alert-success" role="alert">
+						echo '<div class="alert alert-success" role="alert">
   						File saved.
   					</div>';
 					} else if (@$_GET['saved']=='0') {
@@ -44,6 +43,9 @@
 						</div>';
 					}
 				?>
+		<?php include('navigation.php'); ?>
+		
+		
 		<form name="uploadContentForm" action="uploadContentHandling.php" method="post" enctype="multipart/form-data">
 		<div class="form-group">
 	    	<h3>File to upload</h3>
@@ -98,3 +100,5 @@
 
 	
 		</body>
+		<script  type="text/javascript" src="handleNavigation.js"></script>
+		</html>

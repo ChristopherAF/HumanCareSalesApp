@@ -6,7 +6,10 @@
 .list-group-item ul ul, #divBSCT{
 	margin-left:0;
 	padding:0;
-	list-style-type: none;
+	list-style-type: none;}
+
+body{
+	min-width: 300px;s
 }
 
 
@@ -54,6 +57,10 @@ div.contentDiv{
 	margin-top:5vw;
 }
 
+div#admin{
+	margin-top:0;
+}
+
 #resultContainer{
 	margin-top:12vw;
 }
@@ -96,7 +103,7 @@ div.contentDiv{
 	}
 }
 
-@media screen and (max-width:800px)
+@media screen and (max-width:750px)
 {
 	.row{
 		margin-bottom: 8%;
@@ -131,7 +138,7 @@ div.contentDiv{
 
 }
 
-@media (max-width:440px)
+@media (max-width:640px)
 {
 
 	.row{
@@ -245,4 +252,9 @@ div.table-responsive{
 
 .btn-holder{
 	text-align: right;
+}
+
+#navBar{
+	margin-bottom: 5%;
+	font-weight: bold;
 }

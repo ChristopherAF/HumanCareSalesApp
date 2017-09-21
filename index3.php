@@ -202,8 +202,9 @@
 									<a href="files/'.$filename.'">
 									<img src="files/'.$iconFilename.'" />
 									</a>
-									<span style="color:#FFF">'.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'
+									<span style="color:#FFF; display:none;">'.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'
 									</span>
+									<h3>'.$filename.'</h3>
 									</div>';
 								}
 							}

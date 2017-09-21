@@ -44,7 +44,10 @@
 							<div>
 								<img src="../images/logo/headerlogo.png">
 							</div>
-							<div class="contentDiv">	
+							<div class="contentDiv" id="admin">';
+							include('../navigation.php');
+							echo '
+								
 								<div class="form-group">
 								<h3>Choose which files you would like to delete:</h3></div>
 								<form id="deleteForm" name="deleteFunction" action="deleteFunction.php" method="post" >
@@ -98,6 +101,7 @@
 						</div>
 					</body>
 				</html>
+				<script  type="text/javascript" src="../handleNavigation.js"></script>
 				<script >
 					// Check file is selected before POST form
 					$( document ).ready(function() {
