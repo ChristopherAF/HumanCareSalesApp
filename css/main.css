@@ -9,9 +9,8 @@
 	list-style-type: none;}
 
 body{
-	min-width: 300px;s
+	min-width: 300px;
 }
-
 
 .list-group-item-nested{
 	border:none;
@@ -28,15 +27,12 @@ body{
 
 .topDiv img{
 	margin:0 auto;
+	width:20%;
 }
 
 .contentDiv{
  	padding-top: 1%;
  }
-
-.row{
-	text-align: center;
-}
 
 div.topDiv{
 	overflow: hidden;
@@ -54,34 +50,11 @@ div.topDiv{
 div.contentDiv{
 	font-family: calibri, sans-serif;
 	z-index: 1;
-	margin-top:5vw;
 }
 
 div#admin{
 	margin-top:0;
 }
-
-#resultContainer{
-	margin-top:12vw;
-}
-
-@media screen and (min-width: 1401px)
-{
-	img.delete-img{
-		width: 200px;
-		height: 200px;
-	}
-}
-
-@media screen and (max-width: 1400px)
-{
-	.container {
-    	width: 65%;
-	}
-
-	div#resultContainer .div-placeholder {
-		margin:0% 8% -14px 8%;
-	}
 
 	#resultContainer {
     	margin-top: 6vw;
@@ -90,6 +63,7 @@ div#admin{
 	h3, h4 {
     	color: #777777;
    	 	margin-top: -1%;
+   	 	font-size: 1em;
 	}
 
 	img.delete-img{
@@ -101,90 +75,14 @@ div#admin{
 		margin-bottom: 2%;
 		margin-top: 5%;
 	}
-}
-
-@media screen and (max-width:750px)
-{
-	.row{
-		margin-bottom: 8%;
-		margin-top: 16%;
-	}
-
-	.topDiv img{
-		width:30%;
-	}
-
-	h3{
-	font-size:1em;
-		margin-top: 0;
-	}
-
-	#resultContainer {
-    	margin-top: 5vw;
-	}
-
-	div#resultContainer .div-placeholder {
-		margin:0% 8% -14px 8%;
-	}
-
-	h3#titleResult{
-		margin-top:12vw;
-	}
-
-	img.delete-img{
-		width: 100px;
-		height: 100px;
-	}
-
-}
-
-@media (max-width:640px)
-{
-
-	.row{
-		margin-bottom: 8%;
-		margin-top: 12%;
-	}
-
-	h3{
-	font-size:0.8em;
-	}
-
-	div#resultContainer .div-placeholder {
-		margin:0% 8% -14px 8%;
-	}
-
-	#resultContainer{
-		margin-top:12vw;
-	}
-
-	img.delete-img{
-		width: 100px;
-		height: 100px;
-	}
-}
-
-@media (max-width:370px)
-{
-
-	h3{
-		font-size:0.5em;
-		margin-top: 0;
-	}
-
-	.row{
-		margin-bottom: 8%;
-	}
-}	
 
 div.div-placeholder{
- 	padding-right: 1%;
-    padding-left: 1%;
-    width: 34%;
-    min-width: 34%;
-    max-width: 34%;
+    padding-right: 1%; */
+    width: 40%;
+    min-width: 40%;
+    max-width: 40%;
     float: left;
-    margin: 1% 8% 0 8%;
+    margin: 1% 5% 5% 5%;
 }
 
 div.div-placeholder form input[type="image"]{
@@ -257,4 +155,8 @@ div.table-responsive{
 #navBar{
 	margin-bottom: 5%;
 	font-weight: bold;
+}
+
+#titleResult, #titleResultNumber{
+	text-align: center;
 }
