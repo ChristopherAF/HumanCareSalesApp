@@ -66,6 +66,15 @@ h3, h4 {
    	 	font-size: 1.5em;
 }
 
+@media screen and (min-device-width: 900px)
+{
+	div#productTypes, div#productTypes, div#contentTypes, div#resultContainer {
+		    margin-top: 10%;
+	}
+
+}
+
+
 /* ----------- iPhone 4 and 4S ----------- */
 /* ----------- iPhone 5 and 5S ----------- */
 @media screen and (max-device-width: 500px)
