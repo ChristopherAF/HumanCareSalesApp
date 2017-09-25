@@ -26,8 +26,10 @@
 				<link rel="stylesheet" href="css/main.css" type="text/css" />
 				<script type="text/javascript" src="config/jquery.min.js"></script>
 				<script type="text/javascript" src="config/bootstrap.js"></script>
-				<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-				<meta name="apple-mobile-web-app-capable" content="yes" />
+				<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+				<meta name="apple-mobile-web-app-capable" content="yes">  <!-- ANDROID -->
+				<meta name="apple-touch-fullscreen" content="yes"><!-- iOS -->
+				<meta name="apple-mobile-web-app-status-bar-style" content="black">
 			</head>
 			<body>
 				<div class="topDiv">
