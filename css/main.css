@@ -175,3 +175,7 @@ div.table-responsive{
 #titleResult, #titleResultNumber{
 	text-align: center;
 }
+
+.checkbox-admin{
+	margin-right: 3%;
+}

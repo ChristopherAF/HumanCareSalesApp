@@ -58,41 +58,41 @@
 	  	</div>
 		<ul class="list-group">
 			<li class="list-group-item">
-				<span><input type="checkbox" name="market[]" id="US" onclick="showDiv('divPT','market[]')" value="US"><p>US</p></span>
-				<span><input type="checkbox" name="market[]" id="NL" onclick="showDiv('divPT','market[]')" value="NL"><p>NL</p></span>
-				<span><input type="checkbox" name="market[]" id="SE" onclick="showDiv('divPT','market[]')" value="SE"><p>SE</p></span>
-				<span><input type="checkbox" name="market[]" id="CA" onclick="showDiv('divPT','market[]')" value="CA"><p>CA</p></span>
-				<span><input type="checkbox" name="market[]" id="AU" onclick="showDiv('divPT','market[]')" value="AU"><p>AU</p></span>
-				<span><input type="checkbox" name="market[]" id="OM" onclick="showDiv('divPT','market[]')" value="OM"><p>OM</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="market[]" id="US" onclick="showDiv('divPT','market[]')" value="US"><p>United States</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="market[]" id="NL" onclick="showDiv('divPT','market[]')" value="NL"><p>Netherlands</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="market[]" id="SE" onclick="showDiv('divPT','market[]')" value="SE"><p>Sweden</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="market[]" id="CA" onclick="showDiv('divPT','market[]')" value="CA"><p>Canada</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="market[]" id="AU" onclick="showDiv('divPT','market[]')" value="AU"><p>Australia</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="market[]" id="OM" onclick="showDiv('divPT','market[]')" value="OM"><p>Other Markets</p></span>
 			</li>
 			<li class="list-group-item"  id="divPT" style="display:none">
-				<span><input type="checkbox" name="productType[]" id="MA" onclick="showDiv('divCT','productType[]')" value="MA"><p>MA</p></span>
-				<span><input type="checkbox" name="productType[]" id="LS" onclick="showDiv('divCT','productType[]')" value="LS"><p>LS</p></span>
-				<span><input type="checkbox" name="productType[]" id="HB" onclick="showDiv('divCT','productType[]')" value="HB"><p>HB</p></span>
-				<span><input type="checkbox" name="productType[]" id="CC" onclick="showDiv('divCT','productType[]')" value="CC"><p>CC</p></span>
-				<span id="divBS" style="display:none"><input type="checkbox" name="productType[]" id="BS" onclick="showDiv(['divCT'],'productType[]')" value="BS"><p>BS</p></span>
-				<span><input type="checkbox" name="productType[]" id="C" onclick="showDiv(['divCT'],'productType[]')" value="C"><p>C</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="productType[]" id="MA" onclick="showDiv('divCT','productType[]')" value="MA"><p>Mobility Aids</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="productType[]" id="LS" onclick="showDiv('divCT','productType[]')" value="LS"><p>Lifting Solutions</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="productType[]" id="HB" onclick="showDiv('divCT','productType[]')" value="HB"><p>Healthcare Beds</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="productType[]" id="CC" onclick="showDiv('divCT','productType[]')" value="CC"><p>Convertible Chairs</p></span>
+				<span class="checkbox-admin" id="divBS" style="display:none"><input type="checkbox" name="productType[]" id="BS" onclick="showDiv(['divCT'],'productType[]')" value="BS"><p>Bathroom Safety</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="productType[]" id="C" onclick="showDiv(['divCT'],'productType[]')" value="C"><p>Corporate</p></span>
 			</li>
 			<li id="divCT" style="display:none"  class="list-group-item">
 				<ul id="divBSCT" style="display:none;" class="list-group-item-nested">
 				<li>
-						<span><input type="checkbox" name="contentType[]" id="P" onclick="showDiv('divSave','contentType[]')" value="P"><p>P</p></span>
-						<span><input type="checkbox" name="contentType[]" id="V" onclick="showDiv('divSave','contentType[]')" value="V"><p>V</p></span>
+					<span class="checkbox-admin"><input type="checkbox" name="contentType[]" id="P" onclick="showDiv('divSave','contentType[]')" value="P"><p>Presentation</p></span>
+					<span class="checkbox-admin"><input type="checkbox" name="contentType[]" id="V" onclick="showDiv('divSave','contentType[]')" value="V"><p>Video</p></span>
 				</li>
 				</ul>
-				<span><input type="checkbox" name="contentType[]" id="MS" onclick="showDiv('divSave','contentType[]')" value="MS"><p>MS</p></span>
-				<span><input type="checkbox" name="contentType[]" id="PL" onclick="showDiv('divSave','contentType[]')" value="PL"><p>PL</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentType[]" id="MS" onclick="showDiv('divSave','contentType[]')" value="MS"><p>Market &amp; Sales Material</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentType[]" id="PL" onclick="showDiv('divSave','contentType[]')" value="PL"><p>Price List / Local Content</p></span>
 			</li>
 
 
 			<li id="divLSMS" style="display:none" class="list-group-item">
-				<span><input type="checkbox" name="contentTypeLSMS[]" id="QRG" onclick="showDiv('divSave','contentTypeLSMS[]')" value="QRG"><p>QRG</p></span>
-				<span><input type="checkbox" name="contentTypeLSMS[]" id="MM" onclick="showDiv('divSave','contentTypeLSMS[]')" value="MM"><p>MM</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentTypeLSMS[]" id="QRG" onclick="showDiv('divSave','contentTypeLSMS[]')" value="QRG"><p>Quick Reference Guides</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentTypeLSMS[]" id="MM" onclick="showDiv('divSave','contentTypeLSMS[]')" value="MM"><p>Market Material</p></span>
 			</li>
 			<li  id="divLSV" style="display:none"  class="list-group-item">
-				<span><input type="checkbox" name="contentTypeLSV[]" id="PV" onclick="showDiv('divSave','contentTypeLSV[]')" value="PV"><p>PV</p></span>
-				<span><input type="checkbox" name="contentTypeLSV[]" id="TV" onclick="showDiv('divSave','contentTypeLSV[]')" value="TV"><p>TV</p></span>
-				<span><input type="checkbox" name="contentTypeLSV[]" id="STV" onclick="showDiv('divSave','contentTypeLSV[]')" value="STV"><p>STV</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentTypeLSV[]" id="PV" onclick="showDiv('divSave','contentTypeLSV[]')" value="PV"><p>Product Videos</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentTypeLSV[]" id="TV" onclick="showDiv('divSave','contentTypeLSV[]')" value="TV"><p>Technical Videos</p></span>
+				<span class="checkbox-admin"><input type="checkbox" name="contentTypeLSV[]" id="STV" onclick="showDiv('divSave','contentTypeLSV[]')" value="STV"><p>Sales Training Videos</p></span>
 			</li>
 			<li id="divSave" style="display:none"  class="list-group-item">
 				<span><input type="submit" value="Save"></span>

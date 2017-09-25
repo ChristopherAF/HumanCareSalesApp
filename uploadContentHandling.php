@@ -67,9 +67,9 @@
 						}
 					}
 				}
-			}
-			header("Location: uploadContent.php?saved=1");
-		} 
+			}	
+		}
+		header("Location: uploadContent.php?saved=1");
 	} else {
 		header("Location: uploadContent.php?saved=0");
 	}
