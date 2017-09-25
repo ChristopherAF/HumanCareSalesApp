@@ -66,12 +66,8 @@ h3, h4 {
    	 	font-size: 1.5em;
 }
 
-@media screen and (min-device-width: 900px)
-{
-	div#market, div#productTypes, div#productTypes, div#contentTypes, div#resultContainer {
-		    margin-top: 15%;
-	}
-
+div#resultContainer{
+	margin-top: 15%;
 }
 
 
@@ -92,7 +88,7 @@ h3, h4 {
 
 	.row{
 		margin-bottom: 2%;
-		margin-top: 5%;
+		margin-top: 15%;
 	}
 
 div.div-placeholder{
