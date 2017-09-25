@@ -26,7 +26,8 @@
 				<link rel="stylesheet" href="css/main.css" type="text/css" />
 				<script type="text/javascript" src="config/jquery.min.js"></script>
 				<script type="text/javascript" src="config/bootstrap.js"></script>
-				<meta name="viewport" content="width=device-width, initial-scale=1">
+				<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+				<meta name="apple-mobile-web-app-capable" content="yes" />
 			</head>
 			<body>
 				<div class="topDiv">
@@ -215,6 +216,12 @@
 				</div><!-- end  container -->
 				</div><!-- end  contentDiv -->
 			<script  type="text/javascript" src="contentHandler.js"></script>	
+			<script type="text/javascript">
+				if(navigator.userAgent.match(/Android/i)){
+    				window.scrollTo(0,1);
+ 				}				
+			</script>
+			
 			</body>
 			
 			</html>
