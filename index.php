@@ -176,13 +176,8 @@
 							<h3 id="titleResultNumber" class="clearfix">&nbsp;</h3>
 							<?php
 
-							$db = array(
-								'hostname' => 'localhost',
-								'username' => 'root',
-								'password' => '',
-								'database' => 'humancaresalesapp');
+							include('config/dbConfig.php');
 
-							$dbSuccess = false;
 							$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
 							mysqli_set_charset($dbConnected, 'utf8');
 
