@@ -11,7 +11,6 @@
 		if($dbConnected) {
 			for ($i=0; $i<sizeof($chboxId); $i++) {
 				$delete_SQLselect = "UPDATE files SET active='0' WHERE id='".$chboxId[$i]."';";
-				echo $delete_SQLselect;
 				$delete_SQLselect_Query = mysqli_query($dbConnected, $delete_SQLselect);
 			}
 		}
