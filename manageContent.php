@@ -764,7 +764,9 @@
 <?php
 	function content($MA, $PT, $CT, $CTLSMS, $CTLSV) {
 		global $dbConnected;
-			if ($CTLSMS == '' && $CTLSV == '') {
+			if ($CT == '') {
+				$content_SQLselect_Query = mysqli_query($dbConnected, "SELECT * FROM files WHERE MA='".$MA."' AND PT='".$PT."' AND active='1'");
+			} else if ($CTLSMS == '' && $CTLSV == '') {
 				$content_SQLselect_Query = mysqli_query($dbConnected, "SELECT * FROM files WHERE MA='".$MA."' AND PT='".$PT."' AND CT='".$CT."' AND active='1'");
 			} else if ($CTLSMS != '' && $CTLSV == '') {
 				$content_SQLselect_Query = mysqli_query($dbConnected, "SELECT * FROM files WHERE MA='".$MA."' AND PT='".$PT."' AND CT='".$CT."' AND CTLSMS='".$CTLSMS."' AND active='1'");
