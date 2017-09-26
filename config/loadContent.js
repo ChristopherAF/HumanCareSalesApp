@@ -128,7 +128,7 @@ function showDiv(box, cbname) {
                 visSave = "block";
             }
         }
-        for (var i = 0; i < chboxsLSMS.length; i++) {
+        for (var i = 0; i < chboxsLSV.length; i++) {
             if (chboxsLSV[i].checked && (chboxMS.checked == false)) {
                 visSave = "block";
             }
