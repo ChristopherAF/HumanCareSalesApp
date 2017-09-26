@@ -34,6 +34,7 @@
 			<body>
 				<div class="topDiv">
 						<img alt="HumanCare logo" src="images/logo/headerlogo.png">
+						 <button id="offlineBtn" type="button" class="btn btn-success btn-circle btn-offline">Offline</button>
 				</div>
 				<div class="contentDiv">
 				<div class="container">
@@ -195,16 +196,21 @@
 									$CTLSV = $row['CTLSV'];
 									$filename = $row['filename'];
 									$iconFilename = $row['iconFilename'];
+									$offline = $row['offline'];
 
 									echo '<div class="div-placeholder" name="resultBox" 
 									style="display:none" >
-									<a href="files/'.$filename.'">
-									<img src="files/'.$iconFilename.'" />
-									</a>
-									<span style="color:#FFF; display:none;">'.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'
-									</span>
-									<h3>'.$filename.'</h3>
-									</div>';
+									<img src="files/'.$iconFilename.'" ';
+									
+									if(1 == $offline){ 
+										echo'class="offline"';
+									};
+									echo'/>
+									<span style="color:#FFF; display:none;">'
+									.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'
+									</span><a href="files/'
+									.$filename.'
+									"><h3>'.$filename.'</h3></a></div>';
 								}
 							}
 
@@ -213,12 +219,6 @@
 				</div><!-- end  container -->
 				</div><!-- end  contentDiv -->
 			<script  type="text/javascript" src="contentHandler.js"></script>	
-			<script type="text/javascript">
-				if(navigator.userAgent.match(/Android/i)){
-    				window.scrollTo(0,1);
- 				}				
-			</script>
-			
 			</body>
 			
 			</html>

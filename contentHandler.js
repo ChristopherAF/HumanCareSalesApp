@@ -127,4 +127,15 @@ $(document).ready(function() {
     						}
     					
     				}
+
+
+    				/* IPAD HACK TO HIDE SCROLL BAR */
+    				if(navigator.userAgent.match(/Android/i)){
+    				window.scrollTo(0,1);
+ 					}				
+
+ 					/* HANDLES THE OFFLINE BUTTON */
+					$( "#offlineBtn" ).click(function() {
+  					document.location.href = 'offline.php';
+					});
 });
