@@ -277,4 +277,22 @@ img.offline{
 }
 
 
+form.form-signin{
+	margin: 15% auto;
+	width: 40%;
+}
 
+ form.form-signin input, form.form-signin button{
+	margin-top: 5%;
+	font-size: 1.4em;
+ }
+
+ form.form-signin button{
+ 		background-color: #8dc63f;
+ 		border-color: #8dc63f;
+ 		color: white;
+ }
+
+.btn-offline:after, .btn-offline:active:after{
+	background-color: #8dc63f;
+}

@@ -32,12 +32,20 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	</head>
 	<body>
+		<div class="topDiv">
+			<img alt="HumanCare logo" src="../images/logo/headerlogo.png">
+			</div>
+			<div class="contentDiv">
+			<div class="container">
 		<form class="form-signin" name="loginForm" action="../index.php" method="post">
-			<label for="inputUsername" class="sr-only">Användarnamn</label>
-			<input type="text" name="username" id="inputUsername" class="form-control" placeholder="Användarnamn" required="" autofocus="">
-			<label for="inputPassword" class="sr-only">Lösenord</label>
-			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Lösenord" required="">
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Logga in</button>
+			<label for="inputUsername" class="sr-only">User name</label>
+			<input type="text" name="username" id="inputUsername" class="form-control" placeholder="User name" required="" autofocus="">
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+			<button class="btn btn-circle btn-block" type="submit">Sign in</button>
 		</form>
+
+			</div>
+		</div>
 	</body>
 </html>
