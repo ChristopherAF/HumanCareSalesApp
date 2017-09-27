@@ -162,16 +162,11 @@ $(document).ready(function() {
   						});
 					});
 
-					/* HANDLES THE BACK BUTTON */
-					$("#backSelectionBtn").click(function() {
-  					document.location.href = 'index.php';
+					
+					$("#logoOffline").click(function() {
+  						document.location.href = 'index.php';
 					});
 
-
-					$("logoOffline").click(function() {
-  					document.location.href = 'index.php';
-					});
-
-
+					
 
 });

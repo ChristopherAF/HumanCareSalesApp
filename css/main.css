@@ -64,28 +64,32 @@ div#admin{
 h3, h4 {
     	color: #777777;
    	 	margin-top: -1%;
-   	 	font-size: 1.5em;
+   	 	font-size: 1.2em;
 }
 
 div#resultContainer{
 	margin-top: 15%;
 }
 
-a.btn-offline {
+.btn-offline {
     padding: 6px 0px;
     border-radius: 8px;
     text-align: center;
     margin-left: 5%
     background-color: #777;
     color: white;
-    /*  width: 100px;
-    height: 37px;*/
+     width: 100px;
+    height: 37px;
 }
 
 
 .btn-offline:after, .btn-offline:active:after{
 	background-color: #8dc63f;
 }
+
+.p-offline{
+		font-size:1.5em;
+	}
 
 
 
@@ -115,10 +119,14 @@ a.btn-offline {
     height: 60px;
     padding: 6px 0px;
     border-radius: 8px;
-    font-size: 1.5em;
-    margin-left: 8%;
+    font-size: 1.5em; 
     line-height: 2.4;
     font-weight: bold;
+	}
+
+	.btn-success{
+		margin-left: 8%;
+	}
 }
 
 
@@ -134,7 +142,11 @@ a.btn-offline {
 	.btn-offline {
     width: 80px;
     height: 30px;
-    margin-left: 17%;
+    
+	}
+
+	.btn-success{
+		margin-left: 17%;
 	}
 
 }
@@ -248,9 +260,12 @@ div.table-responsive{
 	text-align: center;
 }
 
-.filename{
+h3.filename{
 	text-decoration: underline;
 	color:#8dc63f;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 1.2em;
 }
 
 .checkbox-admin{

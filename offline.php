@@ -37,6 +37,8 @@
 						<img alt="HumanCare logo" id="#logoOffline" src="images/logo/headerlogo.png">
 						</a>
 						 <button id="backSelectionBtn" type="button" class="btn btn-success btn-circle btn-offline">Back to selection</button>
+
+						 <button id="removeAllBtn" type="button" class="btn btn-danger btn-circle btn-offline">Remove all</button>
 				</div>
 				<div class="contentDiv">
 				<div class="container">
@@ -44,6 +46,22 @@
 							<h3 id="titleResult" class="clearfix">Your selected files for offline</h3>
 							
 							<?php
+								if (@$_GET['deleted'] == '1') {
+								echo '
+								<div class="alert alert-success" role="alert">
+										File(s) deleted.
+									</div>
+								';
+							} else if (@$_GET['deleted'] == '0') {
+							echo '
+								<div class="alert alert-danger" role="alert">
+	  								<span class="sr-only">Error:</span>
+	  								Error: No file deleted.
+								</div>
+							';
+							}
+
+							
 							include('config/dbConfig.php');
 
 							$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
@@ -68,6 +86,7 @@
 									<img id="'.$id.'" src="files/'.$iconFilename.'" ';
 									
 									echo'/>
+									<p class="p-offline">'.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'</p>
 									<a href="files/'
 									.$filename.'
 									"><h3 class="filename">'.$filename.'</h3></a></div>';
@@ -78,6 +97,6 @@
 						</div><!-- end row -->
 					</div> <!-- end container-->
 					</div> <!-- end contentDiv--> 
-					<script  type="text/javascript" src="contentHandler.js"></script>
+					<script  type="text/javascript" src="offlineHandler.js"></script>
 					</body>
 				</html>
