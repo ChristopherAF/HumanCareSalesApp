@@ -33,7 +33,9 @@
 			</head>
 					<body>
 				<div class="topDiv">
-						<img alt="HumanCare logo" src="images/logo/headerlogo.png">
+						<a href="index.php">
+						<img alt="HumanCare logo" id="#logoOffline" src="images/logo/headerlogo.png">
+						</a>
 						 <button id="backSelectionBtn" type="button" class="btn btn-success btn-circle btn-offline">Back to selection</button>
 				</div>
 				<div class="contentDiv">

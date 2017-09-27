@@ -34,7 +34,11 @@
 			<body>
 				<div class="topDiv">
 						<img alt="HumanCare logo" src="images/logo/headerlogo.png">
-						 <button id="offlineBtn" type="button" class="btn btn-success btn-circle btn-offline">Offline list</button>
+
+						 <button href="offline.php" id="offlineBtn" type="button" class="btn btn-success btn-circle btn-offline">
+						 	Offline list
+						 </button>
+
 				</div>
 				<div class="contentDiv">
 				<div class="container">

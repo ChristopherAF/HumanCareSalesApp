@@ -71,22 +71,22 @@ div#resultContainer{
 	margin-top: 15%;
 }
 
-.btn-offline {
-    width: 100px;
-    height: 37px;
+a.btn-offline {
     padding: 6px 0px;
     border-radius: 8px;
     text-align: center;
-    font-size: 14px;
-    line-height: 1.42857;
     margin-left: 5%
     background-color: #777;
     color: white;
+    /*  width: 100px;
+    height: 37px;*/
 }
+
 
 .btn-offline:after, .btn-offline:active:after{
 	background-color: #8dc63f;
 }
+
 
 
 @media screen and (min-width: 1600px)
@@ -94,25 +94,32 @@ div#resultContainer{
 .contentDiv {
     padding-top: 5%;
 	}
+
+	div.container {
+    	width: 1000px;
+	}
 }
 
 @media screen and (min-width: 990px)
 {
-	
+	h3, h4 {
+		font-size: 2em;
+	}
+
 	div.container {
     	width: 930px;
 	}
 
-	button.btn-offline {
+	.btn-offline {
     width: 200px;
     height: 60px;
     padding: 6px 0px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 1.5em;
     margin-left: 8%;
+    line-height: 2.4;
+    font-weight: bold;
 }
-
-
 
 
 }
@@ -162,6 +169,8 @@ div.div-placeholder{
     float: left;
     margin: 1% 5% 5% 5%;
 }
+
+
 
 div.div-placeholder form input[type="image"]{
 	width: 100%;
