@@ -33,7 +33,7 @@ body{
 
 
 .contentDiv{
- 	padding-top: 1%;
+ 	padding-top: 0.5%;
  }
 
 div.topDiv{
@@ -58,13 +58,12 @@ div#admin{
 }
 
 #resultContainer {
-    	margin-top: 6vw;
+    margin-top: 6vw;
 }
 
 h3, h4 {
-    	color: #777777;
-   	 	margin-top: -1%;
-   	 	font-size: 1.2em;
+    color: #777777;
+   	font-size: 1.2em;
 }
 
 div#resultContainer{
@@ -295,4 +294,79 @@ form.form-signin{
 
 .btn-offline:after, .btn-offline:active:after{
 	background-color: #8dc63f;
+}
+
+.box{
+	border-bottom: 1px solid #bbb;
+    border-radius: 4px 4px 0 0;
+    line-height: 2em;
+    padding:5px 15px 5px 5px;
+    margin-bottom: 5px;
+}
+
+.box-style{
+	border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+}
+
+.btn-style{
+	margin-top: 1em;
+ 	font-size: 20px;
+ 	font-weight: bold;
+}
+
+
+.manageDiv h3{
+	font-size: 1.5em;
+   /*  color: #8dc63f;
+   font-weight: bold;*/
+}
+
+.manageDiv h4{
+	font-size: 1.4em;	
+	height: 1.6em;
+	line-height: 1.6em;
+	padding-left: 2%;
+}
+
+.manageDiv h3:hover, .manageDiv h4:hover{
+	background-color: #f7f7f7;
+}
+
+h4.sub-category{
+	padding-left: 6%;
+}
+
+h4.sub-sub-category{
+	padding-left: 10%;
+}
+
+hr{
+	border-bottom: 1px solid #ddd;
+}
+
+.bolder{
+	font-weight: bold;
+}
+
+.lighter{
+	border-bottom: 1px solid #ddd;
+}
+
+.media-box{
+    width: 20%;
+    text-align: center;
+    border-bottom: 0;
+}
+
+.media-box input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:15px;
+    height:15px;
+    background:white;
+    border:1px solid #777;
+}
+
+.media-box input[type='checkbox']:checked {
+    background: #8dc63f;
 }
