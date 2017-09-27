@@ -88,8 +88,17 @@ div#resultContainer{
 	background-color: #8dc63f;
 }
 
+
+@media screen and (min-width: 1600px)
+{
+.contentDiv {
+    padding-top: 5%;
+	}
+}
+
 @media screen and (min-width: 990px)
 {
+	
 	div.container {
     	width: 930px;
 	}
