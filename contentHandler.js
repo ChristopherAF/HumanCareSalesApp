@@ -95,14 +95,6 @@ $(document).ready(function() {
 						$("#LSsubContentVideo").hide();
     					$("#resultContainer").show();
     					
-    					
-    					$("#titleResult").text("Search result for "
-    						+market 
-    						+" "+productType
-    						+" "+contentType
-    						+" "+contentTypeLS);
-	
-
     					$("div[name*=resultBox]").each(function(index) {
   							var str = $(this).children('span').text();
 			
@@ -111,7 +103,6 @@ $(document).ready(function() {
     						&& (str.indexOf(contentType) >= 0)
     						&& (str.indexOf(contentTypeLS) >= 0)
     							)
-
     						{ 
     								$(this).closest('div').show();
     								numberResult++;
@@ -119,15 +110,7 @@ $(document).ready(function() {
 	
 						});
 
-						var numberResultTitle = $("#titleResultNumber");
-    						if(numberResult == 0){
-    							numberResultTitle.empty().append("0 document found.");
-    						}else{
-								numberResultTitle.empty().append(numberResult+" document(s) found.");
-    						}
-    					
     				}
-
 
     				/* IPAD HACK TO HIDE SCROLL BAR */
     				if(navigator.userAgent.match(/Android/i)){
@@ -138,4 +121,45 @@ $(document).ready(function() {
 					$( "#offlineBtn" ).click(function() {
   					document.location.href = 'offline.php';
 					});
+
+					/* HANDLES OFFLINE "SELECTION" */
+					var resultBox = $("div[name*=resultBox]");
+					
+					resultBox.each(function() {
+						var boolAdd = 0;
+						var res = $(this);
+  						var img = res.find('img:first');
+  						
+  						img.click(function() {
+  							var id = $(this).attr('id');
+  							var className = $(this).attr('class');
+  							console.log(id  +"  "+ className);
+  							
+  							if(className != "offline"){
+  								img.addClass("offline");
+  								boolAdd = 1;
+  								}else{
+  								img.removeClass("offline");
+  								boolAdd = 0;
+  							}
+
+  							$.ajax({
+       							url: "addOfflineFunction.php",
+        						type: 'POST',
+        						data: {
+            						var_id: id,
+            						bool_offline:boolAdd
+       								},
+       							cache:false,
+       							error:function(data){
+       								alert("failed to sync with database. Please verify your intenret connection.");
+       							},
+                		    	success: function(data)
+                    			{
+ 									alert("Sync succeeded" + data);
+                    			}
+    						});
+
+					});
+  				});
 });

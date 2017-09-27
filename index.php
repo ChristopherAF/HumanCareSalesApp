@@ -34,7 +34,7 @@
 			<body>
 				<div class="topDiv">
 						<img alt="HumanCare logo" src="images/logo/headerlogo.png">
-						 <button id="offlineBtn" type="button" class="btn btn-success btn-circle btn-offline">Offline</button>
+						 <button id="offlineBtn" type="button" class="btn btn-success btn-circle btn-offline">Offline list</button>
 				</div>
 				<div class="contentDiv">
 				<div class="container">
@@ -175,8 +175,8 @@
 						</div><!-- end row -->
 
 						<div class="row" id="resultContainer" style="display: none">
-							<h3 id="titleResult" class="clearfix">&nbsp;</h3>
-							<h3 id="titleResultNumber" class="clearfix">&nbsp;</h3>
+							<h3 id="titleResult" class="clearfix">Press image to choose for offline</h3>
+							<h3 id="titleResultNumber" class="clearfix">Press link to open media</h3>
 							<?php
 
 							include('config/dbConfig.php');
@@ -197,20 +197,23 @@
 									$filename = $row['filename'];
 									$iconFilename = $row['iconFilename'];
 									$offline = $row['offline'];
+									$id = $row['id'];
 
 									echo '<div class="div-placeholder" name="resultBox" 
 									style="display:none" >
-									<img src="files/'.$iconFilename.'" ';
-									
+									<img id="'.$id.'" src="files/'.$iconFilename.'" ';
 									if(1 == $offline){ 
 										echo'class="offline"';
+									}else{
+										echo'class=""';
 									};
 									echo'/>
 									<span style="color:#FFF; display:none;">'
 									.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'
-									</span><a href="files/'
+									</span>
+									<a href="files/'
 									.$filename.'
-									"><h3>'.$filename.'</h3></a></div>';
+									"><h3 class="filename">'.$filename.'</h3></a></div>';
 								}
 							}
 

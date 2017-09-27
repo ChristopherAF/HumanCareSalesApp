@@ -230,6 +230,11 @@ div.table-responsive{
 	text-align: center;
 }
 
+.filename{
+	text-decoration: underline;
+	color:#8dc63f;
+}
+
 .checkbox-admin{
 	margin-right: 3%;
 }
