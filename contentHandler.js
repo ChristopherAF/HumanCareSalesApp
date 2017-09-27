@@ -152,14 +152,22 @@ $(document).ready(function() {
        								},
        							cache:false,
        							error:function(data){
-       								alert("failed to sync with database. Please verify your intenret connection.");
+       								//alert("failed to sync with database. Please verify your intenret connection.");
        							},
                 		    	success: function(data)
                     			{
- 									alert("Sync succeeded" + data);
+ 									//alert("Sync succeeded" + data);
                     			}
     						});
 
 					});
+
+
+  					/* HANDLES THE BACK BUTTON */
+					$( "#backSelectionBtn" ).click(function() {
+  					document.location.href = 'index.php';
+					});
+
+
   				});
 });
