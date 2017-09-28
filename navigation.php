@@ -5,7 +5,7 @@ echo'
   	<li id="upload" role="presentation"><a href="uploadContent.php">Upload content</a></li>
   	<li id="manage" role="presentation"><a href="manageContent.php">Manage content</a></li>
   	<li id="users" role="presentation"><a href="manageUsers.php">Manage users</a></li>
-  	<li id="logout" role="presentation"><a href="#">Log out</a></li>
+  	<li id="logout" role="presentation"><a href="logInAndOut/logOutFunction.php">Log out</a></li>
 </ul>
 </div>'
 ?>
