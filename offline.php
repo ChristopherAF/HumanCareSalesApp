@@ -61,25 +61,21 @@
 							';
 							}
 
-
+							$userid = @$_COOKIE['userID'];
 							include('config/dbConfig.php');
 
 							$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
 							mysqli_set_charset($dbConnected, 'utf8');
 
 							if ($dbConnected) {
-								$content_SQLselect = "SELECT * FROM files WHERE active='1' AND offline='1'";
+							//	$content_SQLselect = "SELECT * FROM offline WHERE userid='".$userid."'";
+
+								$content_SQLselect = "SELECT files.filename, files.iconFilename, files.id FROM files INNER JOIN offline ON files.id = offline.fileid WHERE files.active = '1' AND offline.userid='".$userid."'";
 								$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
 								while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
-									$MA = $row['MA'];
-									$PT = $row['PT'];
-									$CT = $row['CT'];
-									$CTLSMS = $row['CTLSMS'];
-									$CTLSV = $row['CTLSV'];
 									$filename = $row['filename'];
 									$iconFilename = $row['iconFilename'];
-									$offline = $row['offline'];
 									$id = $row['id'];
 
 									echo '<div class="div-placeholder" name="resultBox" >
