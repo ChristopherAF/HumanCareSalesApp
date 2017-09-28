@@ -1,9 +1,8 @@
 <?php
+//$mediaId = $_POST['var_imgID'];
+$mediaId = '395';
 
-$mediaId = $_POST['var_imgID'];
-
-if($mediaId != '') 
-{ 
+if($mediaId != '') { 
  
 	include('config/dbConfig.php');
 	// Create connection
@@ -14,10 +13,11 @@ if($mediaId != '')
 	if($dbConnected){
 		$sqlUpdate = "UPDATE files SET offline='0' WHERE id IN (".$mediaId.");";
 		mysqli_query($dbConnected,$sqlUpdate) or die(mysqli_error($dbConnected)); 
-	}
 		header("Location: offline.php?deleted=1");
-	}else{
-		header("Location: offline.php?deleted=0");
 	}
+		
+} else {
+	header("Location: offline.php?deleted=0");
+}
 
 ?>
