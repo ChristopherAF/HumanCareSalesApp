@@ -14,10 +14,10 @@
 			if($dbConnected){
 				$sqlUpdate = "UPDATE files SET offline='0' WHERE id IN (".$mediaId.");";
 				mysqli_query($dbConnected,$sqlUpdate) or die(mysqli_error($dbConnected)); 
-				header("Location: offline.php?deleted=1");
+				//header("Location: offline.php?deleted=1");
 			}
-		}else{
-				header("Location: offline.php?deleted=0");
-			}
+		}//else{
+			//	header("Location: offline.php?deleted=0");
+		//	}
 		
 		?>

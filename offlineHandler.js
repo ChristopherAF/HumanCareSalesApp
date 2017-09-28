@@ -12,18 +12,19 @@ $(document).ready(function() {
               var imgIDbatch = "";
               var imgID = $(container).find("img");
               var numberImg = $(imgID).length;
-
+  
                 if(numberImg !== 0){
-                        imgID.each(function(index,element) {
-                            imgIDbatch += "'"+($(this).attr('id'))+"'";
+                  imgID.each(function(index,element) {
+                  imgIDbatch += "'"+($(this).attr('id'))+"'";
 
-                            if(index !== (numberImg - 1)){
-                              imgIDbatch += ",";  
-                            }
-                          });
+                  if(index !== (numberImg - 1)){
+                      imgIDbatch += ",";  
+                  }
+                  });
 
-                  /*Send IDs to delete function */
-                  //"269,271"
+
+                  //Send IDs to delete function 
+
                   $.ajax({
                       url: "removeAllOfflineFunction.php",
                       type: 'POST',
@@ -32,14 +33,13 @@ $(document).ready(function() {
                         },
                       cache:false,
                       error:function(data){
-                         //alert("failed to sync with database. Please verify your intenret connection.");
+                        top.location.href="offline.php?deleted=0";//redirection     
                       },
                       success: function(data)
                       {
-                         //alert("Sync succeeded" + data);
+                         top.location.href="offline.php?deleted=1";//redirection
                       }
-                  });
-
-              } //end check if pictures != 0 
+                  });         
+              } //end check if pictures != 0 */
           });
 });
