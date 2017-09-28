@@ -4,7 +4,6 @@
 
 		if($mediaId != '') 
 		{ 
-		 
 			include('config/dbConfig.php');
 			// Create connection
 			$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
