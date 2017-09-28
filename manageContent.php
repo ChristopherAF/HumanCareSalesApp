@@ -823,11 +823,14 @@
 						<image class="delete-img" src="files/'.$iconFilename.'" ></image>
 					</a>
 					<p class="align-left">'.$filename.'</p>
-					<input type="checkbox" name="chboxId[]" value="'.$id.'">
+
+					<input class="css-checkbox" type="checkbox" name="chboxId[]" value="'.$id.'">
+
 					</div>
 					';
 				$contentFound = 1;
 			}
+			echo'<div style="clear:both;"></div>';
 			if ($contentFound == 0) {
 				echo "<p>No content to show</p>";
 			}

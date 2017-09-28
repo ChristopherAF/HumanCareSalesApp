@@ -355,15 +355,28 @@ hr{
 div.media-box{
 	padding-bottom: 1%;
     border-bottom: 1px solid #ddd;
+    background-color: #f7f7f7;
+    padding: 3%;
+    display:flex;
+  	flex-wrap:wrap;
+  	min-height: 250px;
 }
+
 
 .media-box .select-img{
 	text-align: center;
 	display: inline-block;
 }
 
+div.clear{
+	clear: both;
+}
+
 div.select-img{
-	width: 150px;
+	width: 170px;
+    margin-right: 3%;
+    float: left;
+    border: #FFF solid 5px;
 }
 
 div.media-box p{
@@ -374,4 +387,15 @@ div.media-box p{
 .media-box img{
     height: 150px;
     width: 150px;
+}
+
+
+input[type=checkbox].css-checkbox {
+/* Double-sized Checkboxes */
+  -ms-transform: scale(1.8); /* IE */
+  -moz-transform: scale(1.8); /* FF */
+  -webkit-transform: scale(1.8); /* Safari and Chrome */
+  -o-transform: scale(1.8); /* Opera */
+  padding: 10px;
+
 }
