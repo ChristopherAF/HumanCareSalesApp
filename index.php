@@ -234,9 +234,13 @@ if($dbSuccess) {
 							echo'class=""';
 						};
 						echo'/>
-						<span style="color:#FFF; display:none;">'
-						.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'
-						</span>
+
+						<span style="color:#FFF; display:none;" id="span-ma">'.$MA.'</span>
+						<span style="color:#FFF; display:none;" id="span-pt">'.$PT.'</span>
+						<span style="color:#FFF; display:none;" id="span-ct">'.$CT.'</span>
+						<span style="color:#FFF; display:none;" id="span-CTLSMS">'.$CTLSMS.'</span>
+						<span style="color:#FFF; display:none;" id="span-CTLSV">'.$CTLSV.'</span> 
+
 						<a href="files/'
 						.$filename.'
 						"><h3 class="filename">'.$filename.'</h3></a></div>';

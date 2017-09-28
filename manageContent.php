@@ -174,7 +174,7 @@
 						<h4 onclick="show('USC')">- Corporate</h4>
 						<div id="USC" style="display:none" class="media-box">
 							<?php content('US', 'C', '', '', ''); ?>
-							<hr>
+							
 						</div>
 
 					</div>
@@ -302,7 +302,7 @@
 						<h4 onclick="show('NLC')">- Corporate</h4>
 						<div id="NLC" style="display:none" class="media-box">
 							<?php content('NL', 'C', '', '', ''); ?>
-							<hr>
+							
 						</div>
 
 					</div>
@@ -416,7 +416,7 @@
 						<h4 onclick="show('SEC')" >- Corporate</h4>
 						<div id="SEC" style="display:none" class="media-box">
 							<?php content('SE', 'C', '', '', ''); ?>
-							<hr>
+							
 						</div>
 
 					</div>
@@ -544,7 +544,7 @@
 						<h4 onclick="show('CAC')">- Corporate</h4>
 						<div id="CAC" style="display:none" class="media-box">
 							<?php content('CA', 'C', '', '', ''); ?>
-							<hr>
+							
 						</div>
 
 					</div>
@@ -659,7 +659,7 @@
 						<h4 onclick="show('AUC')">- Corporate</h4>
 						<div id="AUC" style="display:none" class="media-box">
 							<?php content('AU', 'C', '', '', ''); ?>
-							<hr>
+							
 						</div>
 
 					</div>
@@ -774,7 +774,7 @@
 						<h4 onclick="show('OMC')">- Corporate</h4>
 						<div id="OMC" style="display:none" class="media-box">
 							<?php content('OM', 'C', '', '', ''); ?>
-							<hr>
+							
 						</div>
 
 					</div>

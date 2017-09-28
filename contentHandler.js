@@ -96,18 +96,21 @@ $(document).ready(function() {
     					$("#resultContainer").show();
     					
     					$("div[name*=resultBox]").each(function(index) {
-  							var str = $(this).children('span').text();
-			
-    						if ((str.indexOf(market) >= 0)
-    						&& (str.indexOf(productType) >= 0)
-    						&& (str.indexOf(contentType) >= 0)
-    						&& (str.indexOf(contentTypeLS) >= 0)
-    							)
+  							var marketChoice = $(this).find("#span-ma").text();
+  							var productChoice = $(this).find("#span-pt").text();
+							var contentChoice = $(this).find("#span-ct").text();
+							var contentChoiceLSMS = $(this).find("#span-CTLSMS").text();
+							var contentChoiceLSSV = $(this).find("#span-CTLSV").text();
+							var contentChoiceLS = (contentChoiceLSMS + contentChoiceLSSV );
+
+							if ((marketChoice === market)
+    						&& (productChoice === productType) 
+    						&& (contentChoice === contentType)
+    						&& (contentChoiceLS === contentTypeLS))
     						{ 
     								$(this).closest('div').show();
     								numberResult++;
     						};
-	
 						});
 
     				}
