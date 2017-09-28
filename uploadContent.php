@@ -54,6 +54,9 @@ if($dbSuccess) {
 		<div class="container">
 		<div><img src="images/logo/headerlogo.png"></div>
 		<div class="contentDiv" id="admin">
+			<?php include('navigation.php'); ?>
+			<h3>File to upload</h3>
+
 				<?php 
 					if(@$_GET['saved']=='1') {
 						echo '
@@ -67,12 +70,10 @@ if($dbSuccess) {
 						</div>';
 					}
 				?>
-		<?php include('navigation.php'); ?>
-		
+				
 		
 		<form name="uploadContentForm" action="uploadContentHandling.php" method="post" enctype="multipart/form-data">
 		<div class="form-group">
-	    	<h3>File to upload</h3>
 	    	<input type="file" name="uploadedFile" class="form-control" placeholder="Choose file to upload">
 	  	</div>
 		<div class="form-group">

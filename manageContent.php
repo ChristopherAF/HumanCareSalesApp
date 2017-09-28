@@ -57,6 +57,7 @@ if($dbSuccess) {
 				</div>
 				<div class="contentDiv" id="admin">
 					<div class="form-group">
+					<?php include('navigation.php'); ?>
 					<h3>Choose which files you would like to delete:</h3></div>
 
 					<?php
@@ -74,7 +75,7 @@ if($dbSuccess) {
 								</div>
 							';
 						}
-						include('navigation.php');
+						
 					?>
 
 				<form id="deleteForm" name="deleteFunction" action="deleteFunction.php" method="post" class="manageDiv">
