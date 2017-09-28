@@ -37,14 +37,13 @@
 			</div>
 			<div class="contentDiv">
 			<div class="container">
-		<form class="form-signin" name="loginForm" action="../index.php" method="post">
-			<label for="inputUsername" class="sr-only">User name</label>
-			<input type="text" name="username" id="inputUsername" class="form-control" placeholder="User name" required="" autofocus="">
-			<label for="inputPassword" class="sr-only">Password</label>
-			<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-			<button class="btn btn-circle btn-block" type="submit">Sign in</button>
-		</form>
-
+				<form class="form-signin" name="loginForm" action="../index.php" method="post">
+					<label for="inputUsername" class="sr-only">User name</label>
+					<input type="text" name="username" id="inputUsername" class="form-control" placeholder="User name" required="" autofocus="">
+					<label for="inputPassword" class="sr-only">Password</label>
+					<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+					<button class="btn btn-circle btn-block" type="submit">Sign in</button>
+				</form>
 			</div>
 		</div>
 	</body>
