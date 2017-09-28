@@ -61,7 +61,7 @@
 							';
 							}
 
-							
+
 							include('config/dbConfig.php');
 
 							$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
@@ -86,7 +86,6 @@
 									<img id="'.$id.'" src="files/'.$iconFilename.'" ';
 									
 									echo'/>
-									<p class="p-offline">'.$MA.' '.$PT.' '.$CT.' '.$CTLSMS.' '.$CTLSV.'</p>
 									<a href="files/'
 									.$filename.'
 									"><h3 class="filename">'.$filename.'</h3></a></div>';

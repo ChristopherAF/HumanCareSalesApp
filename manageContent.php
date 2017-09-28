@@ -74,7 +74,6 @@
 							<h4 onclick="show('USMAP')" class="sub-category">-- Presentations</h4>
 							<div id="USMAP" style="display:none" class="media-box">
 								<?php content('US', 'MA', 'P', '', ''); ?>
-								<hr class="lighter">
 							</div>
 							<h4 onclick="show('USMAMS')" class="sub-category">-- Market &amp; Sales Material</h4>
 							<div id="USMAMS" style="display:none" class="media-box">
@@ -819,13 +818,13 @@
 				$active = $row['active'];
 
 				echo '
-					
+					<div class="select-img">
 					<a href="files/'.$filename.'">
 						<image class="delete-img" src="files/'.$iconFilename.'" ></image>
 					</a>
 					<p class="align-left">'.$filename.'</p>
 					<input type="checkbox" name="chboxId[]" value="'.$id.'">
-
+					</div>
 					';
 				$contentFound = 1;
 			}

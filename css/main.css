@@ -262,8 +262,7 @@ div.table-responsive{
 h3.filename{
 	text-decoration: underline;
 	color:#8dc63f;
-	overflow: hidden;
-	white-space: nowrap;
+	word-break: break-all;
 	font-size: 1.2em;
 }
 
@@ -353,20 +352,26 @@ hr{
 	border-bottom: 1px solid #ddd;
 }
 
-.media-box{
-    width: 20%;
-    text-align: center;
-    border-bottom: 0;
+div.media-box{
+	padding-bottom: 1%;
+    border-bottom: 1px solid #ddd;
 }
 
-.media-box input[type='checkbox'] {
-    -webkit-appearance:none;
-    width:15px;
-    height:15px;
-    background:white;
-    border:1px solid #777;
+.media-box .select-img{
+	text-align: center;
+	display: inline-block;
 }
 
-.media-box input[type='checkbox']:checked {
-    background: #8dc63f;
+div.select-img{
+	width: 150px;
+}
+
+div.media-box p{
+	word-break: break-all;
+	font-size: 1.2em;
+}
+
+.media-box img{
+    height: 150px;
+    width: 150px;
 }
