@@ -65,6 +65,26 @@ if ($dbSuccess) {
 	  						<span class="sr-only">Error:</span>
 	  						Password not changed.
 							</div>';
+						} else if (@$_GET['newuser']=='success') {
+							echo '
+							<div class="alert alert-success" role="alert">
+		  						New user added.
+		  					</div>';
+						} else if (@$_GET['newuser']=='failed') {
+							echo '<div class="alert alert-danger" role="alert">
+	  						<span class="sr-only">Error:</span>
+	  						New user not added.
+							</div>';
+						} else if (@$_GET['deleteuser']=='success') {
+							echo '
+							<div class="alert alert-success" role="alert">
+		  						User removed.
+		  					</div>';
+						} else if (@$_GET['deleteuser']=='failed') {
+							echo '<div class="alert alert-danger" role="alert">
+	  						<span class="sr-only">Error:</span>
+	  						User not removed.
+							</div>';
 						}
 					?>
 					<form id="newUser" name="newUserForm" action="newUserForm.php" method="post">
@@ -103,7 +123,12 @@ if ($dbSuccess) {
 													<input class="btn btn-default" type="submit" value="Change password" />
 												</form>
 											</td>
-											<td></td>
+											<td>
+												<form id="removeUserForm" name="removeUserForm" action="removeUserFunction.php" method="post">
+													<input type="hidden" name="userid" value="'.$id.'">
+													<input class="btn btn-default" type="submit" value="Remove User"  onclick="return confirm(\'Are you sure you want to remove '.$username.'?\')"/>
+												</form>
+											</td>
 										</tr>
 									';
 								}
