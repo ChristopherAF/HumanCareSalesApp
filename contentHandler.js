@@ -139,12 +139,40 @@ $(document).ready(function() {
   							if(className != "offline"){
   								img.addClass("offline");
   								boolAdd = 1;
+  								addOffline(id);
+
   								}else{
   								img.removeClass("offline");
   								boolAdd = 0;
+  								removeOffline(id);
   							}
 
-  							$.ajax({
+
+  							
+  						});
+					});
+
+
+					function removeOffline(id){
+							$.ajax({
+       							url: "removeOfflineFunction.php",
+        						type: 'POST',
+        						data: {
+            						var_id: id
+       								},
+       							cache:false,
+       							error:function(data){
+       								//alert("failed to sync with database. Please verify your intenret connection.");
+       							},
+                		    	success: function(data)
+                    			{
+ 									//alert("Sync succeeded" + data);
+                    			}
+    						});
+					}
+
+					function addOffline(id){
+							$.ajax({
        							url: "addOfflineFunction.php",
         						type: 'POST',
         						data: {
@@ -159,8 +187,7 @@ $(document).ready(function() {
  									//alert("Sync succeeded" + data);
                     			}
     						});
-  						});
-					});
+					}
 
 					
 					$("#logoOffline").click(function() {

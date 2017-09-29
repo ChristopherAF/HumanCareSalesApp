@@ -29,7 +29,6 @@ $(document).ready(function() {
                       url: "removeAllOfflineFunction.php",
                       type: 'POST',
                       data: {
-                          var_imgID:imgIDbatch,
                         },
                       cache:false,
                       error:function(data){
