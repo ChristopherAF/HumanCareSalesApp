@@ -11,9 +11,14 @@
 			mysqli_set_charset($dbConnected, 'utf8');
 			$userid = @$_COOKIE['userID'];
 			if($dbConnected){
-				$sqlUpdate = "DELETE* FROM offline WHERE userid='".$userid."';";
+				$sqlSelect = "SELECT * FROM offline WHERE userid='".$userid."';";
+				$sqlSelect_query = mysqli_query($dbConnected, $sqlSelect);
 
-				mysqli_query($dbConnected,$sqlUpdate) or die(mysqli_error($dbConnected)); 
+				while ($row = mysqli_fetch_array($sqlSelect_query, MYSQLI_ASSOC)) {
+					$id = $row['id'];
+					$sqlUpdate = "DELETE FROM offline WHERE id='".$id."';";
+					mysqli_query($dbConnected,$sqlUpdate) or die(mysqli_error($dbConnected)); 	
+				}
 			}
 		}
 		?>

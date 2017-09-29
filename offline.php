@@ -92,7 +92,7 @@ if($dbSuccess) {
 							if ($dbConnected) {
 							//	$content_SQLselect = "SELECT * FROM offline WHERE userid='".$userid."'";
 
-								$content_SQLselect = "SELECT files.filename, files.iconFilename, files.id FROM files INNER JOIN offline ON files.id = offline.fileid WHERE files.active = '1' AND offline.userid='".$userid."'";
+								$content_SQLselect = "SELECT files.* FROM files JOIN offline ON files.id = offline.fileid WHERE files.active = '1' AND offline.userid='".$userid."'";
 								$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
 								while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
