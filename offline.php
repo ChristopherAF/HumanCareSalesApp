@@ -36,7 +36,7 @@
 						<a href="index.php">
 						<img alt="HumanCare logo" id="#logoOffline" src="images/logo/headerlogo.png">
 						</a>
-						 <button id="backSelectionBtn" type="button" class="btn btn-success btn-circle btn-offline">Back to selection</button>
+						 <button id="backSelectionBtn" type="button" class="btn btn-success btn-circle btn-offline">Back</button>
 
 						 <button id="removeAllBtn" type="button" class="btn btn-danger btn-circle btn-offline">Remove all</button>
 				</div>

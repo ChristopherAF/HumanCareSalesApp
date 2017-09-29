@@ -236,7 +236,7 @@ if($dbSuccess) {
 
 						<a href="files/'
 						.$filename.'
-						"><h3 class="filename">'.$filename.'</h3></a></div>';
+						"><h3 class="filename">Open file</h3></a></div>';
 					}
 				}
 

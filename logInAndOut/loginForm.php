@@ -36,8 +36,9 @@
 			<img alt="HumanCare logo" src="../images/logo/headerlogo.png">
 			</div>
 			<div class="contentDiv">
-			<div class="container">
+			<div class="login"  id="admin">
 				<form class="form-signin" name="loginForm" action="../index.php" method="post">
+					<h3>Sign in:</h3>
 					<label for="inputUsername" class="sr-only">User name</label>
 					<input type="text" name="username" id="inputUsername" class="form-control" placeholder="User name" required="" autofocus="">
 					<label for="inputPassword" class="sr-only">Password</label>

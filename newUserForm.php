@@ -51,7 +51,7 @@ if ($dbSuccess) {
 				<div>
 					<img src="images/logo/headerlogo.png">
 				</div>
-				<div class="contentDiv">
+				<div class="formDiv" id="admin">
 					<h3>New Users:</h3>
 					<form id="newUserForm" name="addNewUserForm" action="newUserFunction.php" method="POST">
 						<div class="form-group">
@@ -70,10 +70,14 @@ if ($dbSuccess) {
 							<label for="adminCheckbox">Is admin</label>
 							<input type="checkbox" name="adminCheckbox" id="adminCheckbox">
 						</div>
-						<input class="btn btn-default" type="submit" name="SaveNewPassword" value="Save">
+						<div class="btn-container">
+						<input class="btn btn-success-usr btn-style" id="newUserSendBtn" type="submit" name="SaveNewPassword" value="Save">
+						</div>
 					</form>
-					<form id="cancelNewUser" name="cancelNewUserForm" action="manageUsers.php" method="post">
-						<input class="btn btn-default" type="submit" name="newUserSubmit" value="Cancel">
+					<form id="cancelNewUser" name="cancelNewUserForm"  action="manageUsers.php" method="post">
+						<div class="btn-container">
+						<input class="btn btn-danger btn-style" type="submit" id="newUserCancelBtn" name="newUserSubmit" value="Cancel">
+							</div>
 					</form>
 					
 				</div>

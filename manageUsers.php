@@ -51,7 +51,7 @@ if ($dbSuccess) {
 				<div>
 					<img src="images/logo/headerlogo.png">
 				</div>
-				<div class="contentDiv">
+				<div class="contentDiv" id="admin">
 					<?php include('navigation.php'); ?>
 					<h3>Manage Users:</h3>
 					<?php 
@@ -88,9 +88,9 @@ if ($dbSuccess) {
 						}
 					?>
 					<form id="newUser" name="newUserForm" action="newUserForm.php" method="post">
-						<input class="btn btn-default" type="submit" name="newUserSubmit" value="New User">
+						<input class="btn btn-success btn-style" type="submit" name="newUserSubmit" value="Create new User">
 					</form>
-					<table class="table" id="userTable">
+					<table class="table table-striped table-bordered table-hover" id="userTable">
 						<thead>
 							<tr>
 								<th>Username</th>
@@ -120,13 +120,13 @@ if ($dbSuccess) {
 											<td>
 												<form id="changePasswordOption" name="changePasswordForm" action="changePasswordForm.php" method="post">
 													<input type="hidden" name="userid" value="'.$id.'">
-													<input class="btn btn-default" type="submit" value="Change password" />
+													<input class="btn btn-success btn-style" type="submit" value="Change password" />
 												</form>
 											</td>
 											<td>
 												<form id="removeUserForm" name="removeUserForm" action="removeUserFunction.php" method="post">
 													<input type="hidden" name="userid" value="'.$id.'">
-													<input class="btn btn-default" type="submit" value="Remove User"  onclick="return confirm(\'Are you sure you want to remove '.$username.'?\')"/>
+													<input class="btn btn-danger btn-style" type="submit" value="Remove User"  onclick="return confirm(\'Are you sure you want to remove '.$username.'?\')"/>
 												</form>
 											</td>
 										</tr>

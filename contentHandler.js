@@ -129,14 +129,12 @@ $(document).ready(function() {
 					var resultBox = $("div[name*=resultBox]");
 					
 					resultBox.each(function() {
-						var boolAdd = 0;
 						var res = $(this);
   						var img = res.find('img:first');
   						
   						img.click(function() {
   							var id = $(this).attr('id');
   							var className = $(this).attr('class');
-  							console.log(id  +"  "+ className);
   							
   							if(className != "offline"){
   								img.addClass("offline");
@@ -150,8 +148,7 @@ $(document).ready(function() {
        							url: "addOfflineFunction.php",
         						type: 'POST',
         						data: {
-            						var_id: id,
-            						bool_offline:boolAdd
+            						var_id: id
        								},
        							cache:false,
        							error:function(data){
