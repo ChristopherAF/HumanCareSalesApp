@@ -1,3 +1,25 @@
+<?php
+include('config/dbConfig.php'); 
+$dbSuccess = false;
+$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
+
+if ($dbConnected) {		
+	$dbSelected = mysqli_select_db($dbConnected,$db['database']);
+	if ($dbSelected) {
+		$dbSuccess = true;
+	} 	
+}
+
+if($dbSuccess) {
+	include_once('logInAndOut/authorise.php');
+
+	$loginAuthorised = (@$_COOKIE["loginAuthorised"] == "34f326defb43f22a4fef8af2a25fa331");
+	$admin = (@$_COOKIE["admin"] == "70e90320def2267590e4bef4f682eb3e");
+
+	if($loginAuthorised) {
+
+?>
+
 <!DOCTYPE html>
 				<html>
 			<head>
@@ -70,7 +92,7 @@
 							if ($dbConnected) {
 							//	$content_SQLselect = "SELECT * FROM offline WHERE userid='".$userid."'";
 
-								$content_SQLselect = "SELECT files.filename, files.iconFilename, files.id FROM files INNER JOIN offline ON files.id = offline.fileid WHERE files.active = '1' AND offline.userid='".$userid."'";
+								$content_SQLselect = "SELECT files.* FROM files JOIN offline ON files.id = offline.fileid WHERE files.active = '1' AND offline.userid='".$userid."'";
 								$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
 								while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
@@ -95,3 +117,10 @@
 					<script  type="text/javascript" src="offlineHandler.js"></script>
 					</body>
 				</html>
+<?php
+
+	} else {	
+			header("Location: logInAndOut/loginForm.php");
+	}		
+}
+?>
