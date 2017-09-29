@@ -222,11 +222,18 @@ if($dbSuccess) {
 						$CTLSV = $row['CTLSV'];
 						$filename = $row['filename'];
 						$iconFilename = $row['iconFilename'];
+						$offline = $row['offline'];
 						$id = $row['id'];
 
 						echo '<div class="div-placeholder" name="resultBox" 
 						style="display:none" >
-						<img id="'.$id.'" src="files/'.$iconFilename.'" />
+						<img id="'.$id.'" src="files/'.$iconFilename.'"';
+						if(1 == $offline){ 
+							echo'class="offline"';
+						}else{
+							echo'class=""';
+						};
+						echo'/>
 
 						<span style="color:#FFF; display:none;" id="span-ma">'.$MA.'</span>
 						<span style="color:#FFF; display:none;" id="span-pt">'.$PT.'</span>
@@ -236,7 +243,7 @@ if($dbSuccess) {
 
 						<a href="files/'
 						.$filename.'
-						"><h3 class="filename">'.$filename.'</h3></a></div>';
+						"><h3 class="filename">Open file</h3></a></div>';
 					}
 				}
 

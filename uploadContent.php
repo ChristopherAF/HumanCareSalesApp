@@ -119,7 +119,7 @@ if($dbSuccess) {
 				<span class="checkbox-admin"><input type="checkbox" name="contentTypeLSV[]" id="STV" onclick="showDiv('divSave','contentTypeLSV[]')" value="STV"><p>Sales Training Videos</p></span>
 			</li>
 			<li id="divSave" style="display:none"  class="list-group-item">
-				<span><input type="submit" value="Save"></span>
+				<span><input type="submit" value="Save" class="btn btn-success btn-style"></span>
 			</li>
 		</ul> 	
 

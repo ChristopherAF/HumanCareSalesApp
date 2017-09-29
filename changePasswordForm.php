@@ -29,6 +29,13 @@
 			<script  type="text/javascript" src="handleNavigation.js"></script>
 		</head>
 		<body>
+				<div class="container">
+				<div>
+					<img src="images/logo/headerlogo.png">
+				</div>
+				<div class="formDiv" id="admin">
+					<h3>Change password:</h3>
+
 			<form id="changePasswordFunction" name="changePasswordFunctionForm" action="changePasswordFunction.php" method="POST">
 				<input type="hidden" name="userid" value="<?php echo $_POST['userid']; ?>">
 				<div class="form-group">
@@ -39,10 +46,20 @@
 				    <label for="changePassword2">New Password Again</label>
 				    <input type="text" class="form-control" id="changePassword2" name="changePassword2">
 				</div>
-				<input class="btn btn-default" type="submit" name="SaveNewPassword" value="Save">
+
+				<div class="btn-container">
+						<input class="btn btn-success-usr btn-style" id="newUserSendBtn" type="submit" name="SaveNewPassword" value="Save">
+				</div>
 			</form>
+
 			<form id="cancelChangePassword" name="cancelChangePasswordForm" action="manageUsers.php" method="POST">
-				<input class="btn btn-default" type="submit" name="cancelChangePasswordSubmit" value="Cancel">
-			</form> 
+				<div class="btn-container">
+						<input class="btn btn-danger btn-style" type="submit" id="newUserCancelBtn" name="cancelChangePasswordSubmit" value="Cancel">
+				</div>
+			</form>
+
+				</div>
+			</div>
+
 		</body>
 	</html>
