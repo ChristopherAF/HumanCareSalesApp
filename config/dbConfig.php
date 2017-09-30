@@ -3,7 +3,7 @@
 	$db = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
+	'password' => 'Cmc93msl',
 	'database' => 'humancaresalesapp'); 
 
 ?>
