@@ -211,10 +211,14 @@ if($dbSuccess) {
 				mysqli_set_charset($dbConnected, 'utf8');
 
 				if ($dbConnected) {
-					$content_SQLselect = "SELECT * FROM files WHERE active='1'";
+					$content_SQLselect = "SELECT files.*,offline.fileid,offline.id as offlineId
+						FROM files LEFT JOIN offline ON files.id = offline.fileid WHERE files.active='1'";
+
+					
 					$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
 					while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
+						$id = $row['id'];
 						$MA = $row['MA'];
 						$PT = $row['PT'];
 						$CT = $row['CT'];
@@ -222,9 +226,12 @@ if($dbSuccess) {
 						$CTLSV = $row['CTLSV'];
 						$filename = $row['filename'];
 						$iconFilename = $row['iconFilename'];
-						$offline = $row['offline'];
-						$id = $row['id'];
-
+						
+						$offline = 0;
+						if(!is_null($row['offlineId'])){
+							$offline = 1;
+						};
+						
 						echo '<div class="div-placeholder" name="resultBox" 
 						style="display:none" >
 						<img id="'.$id.'" src="files/'.$iconFilename.'"';

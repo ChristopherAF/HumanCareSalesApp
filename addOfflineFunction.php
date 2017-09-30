@@ -6,7 +6,6 @@ if(isset($_POST['var_id']))
 
 	include('config/dbConfig.php');
 	// Create connection
-	$userid = @$_COOKIE['userID'];
 	$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
 	if (!$dbConnected) { die("Connection failed: " . mysqli_connect_error());}
 	mysqli_set_charset($dbConnected, 'utf8');
@@ -17,6 +16,7 @@ if(isset($_POST['var_id']))
 	while ($row = mysqli_fetch_array($offline_SQLselect_query, MYSQLI_ASSOC)) {
 		array_push($fileidArray, $row['fileid']);
 	}
+	$userid = @$_COOKIE['userID'];
 
 	if (!in_array($mediaId, $fileidArray)) {
 		$modify_SQLselect = "INSERT INTO offline (offline.userid,offline.fileid) VALUES ('".$userid."','".$mediaId."');";
