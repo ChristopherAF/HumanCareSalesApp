@@ -20,10 +20,10 @@ if(isset($_POST['var_id']))
 	}
 $_POST['fileArray'] = $fileidArray;
 	if (in_array($mediaId, $fileidArray)) {
-		$offline_SQLdelete = "DELETE FROM offline WHERE fileid='".$mediaId."' AND userid='".$userid."'";
-		$offline_SQLdelete_query = mysqli_query($dbConnected, $offline_SQLdelete);
-	} else {
 		
+	} else {
+		$modify_SQLselect = "INSERT INTO offline (offline.userid,offline.fileid) VALUES ('".$userid."','".$mediaId."');";
+		$modify_SQLselect_Query = mysqli_query($dbConnected, $modify_SQLselect);
 	}
 	
 	// close conection
