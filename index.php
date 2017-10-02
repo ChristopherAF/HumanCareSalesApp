@@ -210,9 +210,19 @@ if($dbSuccess) {
 				$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
 				mysqli_set_charset($dbConnected, 'utf8');
 
+				$userID = @$_COOKIE['userID'];
+
 				if ($dbConnected) {
-					$content_SQLselect = "SELECT files.*,offline.fileid,offline.id as offlineId
-						FROM files LEFT JOIN offline ON files.id = offline.fileid WHERE files.active='1'";
+
+					$offlineArray = [];
+					$offline_SQLselect = "SELECT * FROM offline WHERE userid='".$userID."'";
+					$offline_SQLselect_query = mysqli_query($dbConnected, $offline_SQLselect);
+					while($offlineRow = mysqli_fetch_array($offline_SQLselect_query, MYSQLI_ASSOC)) {
+						$offlineFileid = $offlineRow['fileid'];
+						array_push($offlineArray, $offlineFileid);
+					}
+
+					$content_SQLselect = "SELECT * FROM files WHERE active='1'";
 
 					$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
@@ -225,20 +235,16 @@ if($dbSuccess) {
 						$CTLSV = $row['CTLSV'];
 						$filename = $row['filename'];
 						$iconFilename = $row['iconFilename'];
-						
-						$offline = 0;
-						if(!is_null($row['offlineId'])){
-							$offline = 1;
-						};
-						
+
 						echo '<div class="div-placeholder" name="resultBox" 
 						style="display:none" >
 						<img id="'.$id.'" src="files/'.$iconFilename.'"';
-						if(1 == $offline){ 
+						if(in_array($id, $offlineArray)) { 
 							echo'class="offline"';
-						}else{
+						} else {
 							echo'class=""';
-						};
+						}
+						
 						echo'/>
 
 						<span style="color:#FFF; display:none;" id="span-ma">'.$MA.'</span>
@@ -249,7 +255,7 @@ if($dbSuccess) {
 
 						<a href="files/'
 						.$filename.'
-						"><h3 class="filename">Open file</h3></a></div>';
+						"><h3 class="filename">'.$filename.'</h3></a></div>';
 					}
 				}
 

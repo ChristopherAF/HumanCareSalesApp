@@ -1,21 +1,33 @@
-		<?php
+<?php
 
-		$mediaId = $_POST['var_id'];
+$userid = @$_COOKIE['userID'];
+$fileidArray = [];
 
-		if($mediaId != '') 
-		{ 
-			include('config/dbConfig.php');
-			// Create connection
-			$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
-			if (!$dbConnected) { die("Connection failed: " . mysqli_connect_error());}
-			mysqli_set_charset($dbConnected, 'utf8');
-			$userid = @$_COOKIE['userID'];
-			if($dbConnected){
-				$sqlUpdate = "DELETE FROM offline 
-							  WHERE offline.useriD ='".$userid."' 
-							  AND offline.fileid = '".$mediaId."';";
-						
-				mysqli_query($dbConnected,$sqlUpdate) or die(mysqli_error($dbConnected)); 
-			}
-		}
-		?>
+if(isset($_POST['var_id'])) 
+{ 
+  $mediaId = $_POST['var_id']; 
+
+	include('config/dbConfig.php');
+	// Create connection
+	$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
+	if (!$dbConnected) { die("Connection failed: " . mysqli_connect_error());}
+	mysqli_set_charset($dbConnected, 'utf8');
+	
+	$offline_SQLselect = "SELECT * FROM offline WHERE userid='".$userid."'";
+	$offline_SQLselect_query = mysqli_query($dbConnected, $offline_SQLselect);
+	while ($row = mysqli_fetch_array($offline_SQLselect_query, MYSQLI_ASSOC)) {
+		array_push($fileidArray, $row['fileid']);
+	}
+$_POST['fileArray'] = $fileidArray;
+	if (in_array($mediaId, $fileidArray)) {
+		
+	} else {
+		$modify_SQLselect = "INSERT INTO offline (offline.userid,offline.fileid) VALUES ('".$userid."','".$mediaId."');";
+		$modify_SQLselect_Query = mysqli_query($dbConnected, $modify_SQLselect);
+	}
+	
+	// close conection
+	mysqli_close($dbConnected);
+}
+
+?>
