@@ -55,10 +55,7 @@ if($dbSuccess) {
 			</head>
 					<body>
 				<div class="topDiv">
-						<a href="index.php">
-						<img alt="HumanCare logo" id="#logoOffline" src="images/logo/headerlogo.png">
-						</a>
-						 <button id="backSelectionBtn" type="button" class="btn btn-success btn-circle btn-offline">Back</button>
+						 <button id="backSelectionBtn" type="button" class="btn btn-success btn-circle btn-offline">Homepage</button>
 
 						 <button id="removeAllBtn" type="button" class="btn btn-danger btn-circle btn-offline">Remove all</button>
 				</div>
@@ -90,8 +87,9 @@ if($dbSuccess) {
 							mysqli_set_charset($dbConnected, 'utf8');
 
 							if ($dbConnected) {
-							//	$content_SQLselect = "SELECT * FROM offline WHERE userid='".$userid."'";
-
+								/*
+								$content_SQLselect = "SELECT * FROM offline WHERE userid='".$userid."'";
+								*/
 								$content_SQLselect = "SELECT files.* FROM files JOIN offline ON files.id = offline.fileid WHERE files.active = '1' AND offline.userid='".$userid."'";
 								$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
