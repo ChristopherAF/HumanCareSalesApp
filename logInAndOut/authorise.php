@@ -30,9 +30,9 @@
 					setcookie("admin", "70e90320def2267590e4bef4f682eb3e", time()+7200, "/");
 					$returnCode[1] = true;
 				} else if ($admin == '0') {
-					setcookie("userID", $userID, 0, "/");	
-					setcookie("loginAuthorised", "34f326defb43f22a4fef8af2a25fa331", 0, "/");
-					setcookie("admin", "bdba9101fc52ae1f6035fba90bd61618", time()+7200, "/");
+					setcookie("userID", $userID, time()+432000, "/");	
+					setcookie("loginAuthorised", "34f326defb43f22a4fef8af2a25fa331", time()+432000, "/");
+					setcookie("admin", "bdba9101fc52ae1f6035fba90bd61618", time()+432000, "/");
 					$returnCode[1] = false;
 				}
 				
