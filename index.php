@@ -214,7 +214,6 @@ if($dbSuccess) {
 					$content_SQLselect = "SELECT files.*,offline.fileid,offline.id as offlineId
 						FROM files LEFT JOIN offline ON files.id = offline.fileid WHERE files.active='1'";
 
-					
 					$content_SQLselect_Query = mysqli_query($dbConnected, $content_SQLselect);
 
 					while ($row = mysqli_fetch_array($content_SQLselect_Query, MYSQLI_ASSOC)) {
