@@ -353,6 +353,15 @@ h3.filename {
     margin-bottom: 15%;
 }
 
+.crop{
+     height: 170px;
+     overflow: hidden;
+}
+
+.crop img{
+     height: 170px;
+}
+
 
 /* ---------- Offline --------- */
 
@@ -447,6 +456,8 @@ and (orientation : landscape) {
     margin-left: -16%;
     }
 
+
+
 }
 
 
@@ -486,7 +497,7 @@ and (orientation : portrait) {
     }
 
     div.div-placeholder {
-        width: 45%;
+        width: 44%;
         margin: 0% 5% 0 0;
     }
 
@@ -499,7 +510,7 @@ and (orientation : portrait) {
 
     h3,
     h4 {
-        font-size: 1.2em;
+        font-size: 1.6em;
         word-break: break-all;
         margin-top: 6%;
         margin-bottom: 10%
@@ -667,6 +678,15 @@ and (orientation : portrait) {
         font-size: 0.9em;
     }
 
+     .crop{
+     height: 100px;
+     overflow: hidden;
+    }
+
+    .crop img{
+     height: 100px;
+    }
+
 
     #titleResultNumber,
     #titleResult {
@@ -738,7 +758,7 @@ and (orientation : portrait) {
 
     h3,
     h4 {
-        font-size: 0.7em;
+        font-size: 0.9em;
         word-break: break-all;
         margin-top: 6%;
         margin-bottom: 10%
@@ -746,6 +766,15 @@ and (orientation : portrait) {
 
     h3.filename {
         font-size: 0.8em;
+    }
+
+    .crop{
+     height: 110px;
+     overflow: hidden;
+    }
+
+    .crop img{
+     height: 110px;
     }
 
 
@@ -833,5 +862,14 @@ and (orientation : portrait) {
     #titleResultNumber {
         margin-top: 0;
         margin-bottom: 2%;
+    }
+
+     .crop{
+     height: 110px;
+     overflow: hidden;
+    }
+
+    .crop img{
+     height: 110px;
     }
 }

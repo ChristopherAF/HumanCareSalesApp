@@ -238,14 +238,15 @@ if($dbSuccess) {
 
 						echo '<div class="div-placeholder" name="resultBox" 
 						style="display:none" >
-						<img id="'.$id.'" src="files/'.$iconFilename.'"';
-						if(in_array($id, $offlineArray)) { 
+						<div class="crop">
+							<img id="'.$id.'" src="files/'.$iconFilename.'"';
+							if(in_array($id, $offlineArray)) { 
 							echo'class="offline"';
-						} else {
+							} else {
 							echo'class=""';
-						}
-						
-						echo'/>
+							}	
+							echo'/>
+						</div>
 
 						<span style="color:#FFF; display:none;" id="span-ma">'.$MA.'</span>
 						<span style="color:#FFF; display:none;" id="span-pt">'.$PT.'</span>
