@@ -510,7 +510,7 @@ and (orientation : portrait) {
 
     h3,
     h4 {
-        font-size: 1.6em;
+        font-size: 1.8em;
         word-break: break-all;
         margin-top: 6%;
         margin-bottom: 10%
@@ -552,7 +552,7 @@ and (orientation : portrait) {
     }
 
     div.container {
-        width: 70%;
+        width: 100%;
     }
 
     .btn-success {
@@ -621,12 +621,12 @@ and (orientation : portrait) {
 }
 
 
-/* ----------- iPad mini ----------- */
+/* ----------- iPad mini / iPhone 6s----------- */
 
 @media screen and (min-width: 414px) and (max-width: 703px) {
 
     div.container {
-        width: 70%;
+        width: 100%;
     }
 
     form.form-signin {
