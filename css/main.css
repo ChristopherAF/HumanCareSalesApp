@@ -367,6 +367,7 @@ h3.filename {
 .btn-offline {
     width: 144px;
     height: 46px;
+     margin-left: 3%;
 }
 
 
@@ -384,7 +385,7 @@ div.div-placeholder {
 
 h3,
 h4 {
-    font-size: 1.5em;
+    font-size: 2em;
     word-break: break-all;
     margin-top: 6%;
     margin-bottom: 10%
@@ -409,7 +410,7 @@ div#resultContainer {
 }
 
 
-/* ---------- Landscape format ---------------*/
+/* ---------- iPAD Landscape format ---------------*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -417,18 +418,39 @@ and (orientation : landscape) {
 
 	.contentDiv {
     padding-top: 6%;
+    width:100%;
+    padding-right: 0;
+    padding-left: 1%;
 	}
 
 	div.container {
-        width: 62%;
+        width:  100%;
+        margin: 0;
+        padding:0; 
     }
+
     #market{
 		padding-top: 6%;
+        padding-left:0;
     }
+
+    .row{
+        margin-left: 8%;
+    }
+
+    div.div-placeholder {
+    width: 25%;
+    margin: 0% 3% 0 0;
+    }
+
+    #titleResultNumber, #titleResult {
+    margin-left: -16%;
+    }
+
 }
 
 
-/* ----------- Larger tablet / computer ----------- */
+/* ----------- ipad ----------- */
 
 @media screen and (min-width: 768px) 
 and (max-width: 1024px)
@@ -455,6 +477,7 @@ and (orientation : portrait) {
     .btn-offline {
         width: 110px;
         height: 46px;
+        margin-left: 3%;
     }
 
     form.form-signin {
@@ -463,12 +486,12 @@ and (orientation : portrait) {
     }
 
     div.div-placeholder {
-        width: 30%;
+        width: 45%;
         margin: 0% 5% 0 0;
     }
 
     .row {
-        margin-left: 17%;
+        margin-left: 3%;
         margin-right: 0;
         width: 100%;
         margin-top: 7%;
@@ -489,7 +512,7 @@ and (orientation : portrait) {
 
     #titleResultNumber,
     #titleResult {
-        margin-left: -37%;
+        margin-left: -9%;
     }
 
     #titleResult {
@@ -666,29 +689,33 @@ and (orientation : portrait) {
 
 @media screen and (min-width: 320px) and (max-width: 414px) {
 
-
     div.container {
-        width: 70%;
+        width: 100%;
+        margin: 0;
+        padding:0; 
+    }
+
+    .contentDiv {
+        padding-top: 10%;
+        width: 100%;
+    }
+
+    #market{
+        padding-top: 6%;
+        padding-left:0;
     }
 
     form.form-signin {
         width: 80%;
     }
 
-
     button.btn-offline {
         padding: 1px 0px;
         border-radius: 5px;
-        margin-left: 17%;
         font-size: 0.7em;
         width: 80px;
         height: 30px;
     }
-
-    .contentDiv {
-        padding-top: 10%;
-    }
-
 
     form.form-signin {
         width: 100%;
@@ -696,12 +723,15 @@ and (orientation : portrait) {
     }
 
     div.div-placeholder {
-        width: 30%;
-        margin: 0% 5% 0 0;
+        /*width: 30%;
+        margin: 0% 5% 0 0; */
+        width: 46%;
+        margin: 0% 2% 0 0;
     }
 
     .row {
-        margin-left: 17%;
+       /* margin-left: 17%; */
+        margin-left: 3%;
         margin-right: 0;
         width: 100%;
     }
@@ -721,7 +751,7 @@ and (orientation : portrait) {
 
     #titleResultNumber,
     #titleResult {
-        margin-left: -17%;
+        margin-left: -6%;
     }
 
     #titleResult {
@@ -769,24 +799,25 @@ and (orientation : portrait) {
 
     div.div-placeholder {
         margin: 0% 9% 0 0;
+        width: 70%;
     }
 
     .row {
-        margin-left: 17%;
+        margin-left: 14%;
         margin-right: 0;
         width: 100%;
     }
 
     h3,
     h4 {
-        font-size: 0.7em;
+        font-size: 0.9em;
         word-break: break-all;
         margin-top: 6%;
         margin-bottom: 10%
     }
 
     h3.filename {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
     #titleResult,
