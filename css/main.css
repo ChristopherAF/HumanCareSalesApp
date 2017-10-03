@@ -15,6 +15,9 @@ div.container {
 
 .contentDiv {
     padding-top: 4%;
+    max-width: 1700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -353,14 +356,15 @@ h3.filename {
     margin-bottom: 15%;
 }
 
-.crop{
-     height: 170px;
-     overflow: hidden;
+.crop {
+    height: 130px;
+    overflow: hidden;
 }
 
-.crop img{
-     height: 170px;
+.crop img {
+    height: 130px;
 }
+
 
 
 /* ---------- Offline --------- */
@@ -456,12 +460,20 @@ and (orientation : landscape) {
     margin-left: -16%;
     }
 
+    .crop {
+    height: 139px;
+    overflow: hidden;
+    }
+
+    .crop img {
+    height: 139px;
+    }
 
 
 }
 
 
-/* ----------- ipad ----------- */
+/* ----------- ipad portait ----------- */
 
 @media screen and (min-width: 768px) 
 and (max-width: 1024px)
@@ -538,6 +550,17 @@ and (orientation : portrait) {
     div#resultContainer {
         margin-top: 5%;
     }
+
+    .crop {
+    height: 125px;
+    overflow: hidden;
+    }
+
+    .crop img {
+    height: 125px;
+    }
+
+
 }
 
 
@@ -687,7 +710,6 @@ and (orientation : portrait) {
      height: 100px;
     }
 
-
     #titleResultNumber,
     #titleResult {
         margin-left: -30%;
@@ -768,6 +790,7 @@ and (orientation : portrait) {
         font-size: 0.8em;
     }
 
+        /*
     .crop{
      height: 110px;
      overflow: hidden;
@@ -775,6 +798,15 @@ and (orientation : portrait) {
 
     .crop img{
      height: 110px;
+    }
+    */
+    .crop {
+    height: 98px;
+    overflow: hidden;
+    }
+
+    .crop img {
+    height: 98px;
     }
 
 
@@ -863,7 +895,7 @@ and (orientation : portrait) {
         margin-top: 0;
         margin-bottom: 2%;
     }
-
+        /*
      .crop{
      height: 110px;
      overflow: hidden;
@@ -872,4 +904,14 @@ and (orientation : portrait) {
     .crop img{
      height: 110px;
     }
+        */
+    .crop {
+    height: 122px;
+    overflow: hidden;
+    }
+
+    .crop img {
+    height: 122px;
+    }
+
 }
