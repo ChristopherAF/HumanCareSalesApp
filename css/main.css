@@ -332,11 +332,18 @@ div.div-placeholder form input[type="image"] {
     text-align: center;
 }
 
-h3.filename {
+.filename {
     text-decoration: underline;
-    color: #4cae4c;
+    color: #fff;
     font-size: 1.5em;
     white-space: nowrap;
+
+}
+h3.offline{
+     color: #4cae4c;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
 }
 
 

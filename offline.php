@@ -105,7 +105,7 @@ if($dbSuccess) {
 												<img id="'.$id.'" src="files/'.$iconFilename.'"/>
 											</a>
 										</div>
-										<p>'.$filename.'</p>
+										<h3 class="filename offline">'.$filename.'</h3>
 									</div>
 									';
 								
