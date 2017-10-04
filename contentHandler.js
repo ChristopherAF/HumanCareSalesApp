@@ -130,24 +130,22 @@ $(document).ready(function() {
 					
 					resultBox.each(function() {
 						var res = $(this);
-  						var img = res.find('img:first');
+  						var btn = res.find('button:first');
   						
-  						img.click(function() {
+  						btn.click(function() {
   							var id = $(this).attr('id');
   							var className = $(this).attr('class');
   							
   							if(className != "offline"){
-  								img.addClass("offline");
+  								btn.addClass("offline");
   								boolAdd = 1;
   								addOffline(id);
 
   								}else{
-  								img.removeClass("offline");
+  								btn.removeClass("offline");
   								boolAdd = 0;
   								removeOffline(id);
   							}
-
-
   							
   						});
 					});
@@ -191,6 +189,7 @@ $(document).ready(function() {
 
 					
 					$("#logoOffline").click(function() {
+						$('resultContainer').hide();
   						document.location.href = 'index.php';
 					});
 

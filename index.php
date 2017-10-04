@@ -236,31 +236,34 @@ if($dbSuccess) {
 						$filename = $row['filename'];
 						$iconFilename = $row['iconFilename'];
 
-						echo '<div class="div-placeholder" name="resultBox" 
-						style="display:none" >
-						<div class="crop">
-							<img id="'.$id.'" src="files/'.$iconFilename.'"';
+						echo '
+						<div class="div-placeholder" name="resultBox" style="display:none">
+							<div class="crop">
+								<a href="files/'.$filename.'">
+									<img id="'.$id.'" src="files/'.$iconFilename.'"/>
+								</a>
+							</div>
+
+							<span style="color:#FFF; display:none;" id="span-ma">'.$MA.'</span>
+							<span style="color:#FFF; display:none;" id="span-pt">'.$PT.'</span>
+							<span style="color:#FFF; display:none;" id="span-ct">'.$CT.'</span>
+							<span style="color:#FFF; display:none;" id="span-CTLSMS">'.$CTLSMS.'</span>
+							<span style="color:#FFF; display:none;" id="span-CTLSV">'.$CTLSV.'</span> 
+							<button id="'.$id.'" '; 
 							if(in_array($id, $offlineArray)) { 
 							echo'class="offline"';
 							} else {
 							echo'class=""';
 							}	
-							echo'/>
+							echo'><h3 class="filename">Save File</h3></button>
 						</div>
+						';
 
-						<span style="color:#FFF; display:none;" id="span-ma">'.$MA.'</span>
-						<span style="color:#FFF; display:none;" id="span-pt">'.$PT.'</span>
-						<span style="color:#FFF; display:none;" id="span-ct">'.$CT.'</span>
-						<span style="color:#FFF; display:none;" id="span-CTLSMS">'.$CTLSMS.'</span>
-						<span style="color:#FFF; display:none;" id="span-CTLSV">'.$CTLSV.'</span> 
-
-						<a href="files/'
-						.$filename.'
-						"><h3 class="filename">Open File</h3></a></div>';
 					}
 				}
 
 				?>
+
 			</div><!-- end row -->
 	</div><!-- end  container -->
 	</div><!-- end  contentDiv -->
