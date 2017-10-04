@@ -1,3 +1,24 @@
+<?php
+	
+	include('config/dbConfig.php');
+	// Create connection
+	$dbConnected = mysqli_connect($db['hostname'],$db['username'],$db['password'],$db['database']);
+	mysqli_set_charset($dbConnected, 'utf8');
+	
+	$userid = @$_POST['userid'];
+	
+	if($dbConnected){
+
+		$sqlSelect = "SELECT * FROM login WHERE id='".$userid."';";
+		$sqlSelect_query = mysqli_query($dbConnected, $sqlSelect);
+
+		while ($row = mysqli_fetch_array($sqlSelect_query, MYSQLI_ASSOC)) {
+			$username = $row['username'];	
+		}
+	}
+
+?>
+
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -34,10 +55,10 @@
 					<img src="images/logo/headerlogo.png">
 				</div>
 				<div class="formDiv" id="admin">
-					<h3>Change password:</h3>
+					<h3>Change password for <?php echo $username; ?>:</h3>
 
 			<form id="changePasswordFunction" name="changePasswordFunctionForm" action="changePasswordFunction.php" method="POST">
-				<input type="hidden" name="userid" value="<?php echo $_POST['userid']; ?>">
+				<input type="hidden" name="userid" value="<?php echo $userid; ?>">
 				<div class="form-group">
 				    <label for="changePassword1">New Password</label>
 				    <input type="text" class="form-control" id="changePassword1" name="changePassword1">
