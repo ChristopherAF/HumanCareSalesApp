@@ -98,16 +98,17 @@ if($dbSuccess) {
 									$iconFilename = $row['iconFilename'];
 									$id = $row['id'];
 
-									echo '<div class="div-placeholder" name="resultBox" >
-									<div class="crop">
-									<img id="'.$id.'" src="files/'.$iconFilename.'" ';
-									
-									echo'/>
+									echo '
+									<div class="div-placeholder" name="resultBox" >
+										<div class="crop">
+											<a href="files/'.$filename.'">
+												<img id="'.$id.'" src="files/'.$iconFilename.'"/>
+											</a>
+										</div>
+										<p>'.$filename.'</p>
 									</div>
-									<a href="files/'
-									.$filename.'
-									"><h3 class="filename">'.$filename.'</h3></a>
-									</div>';
+									';
+								
 								}
 							}
 
