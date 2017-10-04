@@ -135,56 +135,39 @@ $(document).ready(function() {
   						btn.click(function() {
   							var id = $(this).attr('id');
   							var className = $(this).attr('class');
+  							var btnText = $(this).find('h3:first');
   							
-  							if(className != "offline"){
-  								btn.addClass("offline");
-  								boolAdd = 1;
-  								addOffline(id);
+							$.ajax({
+       							url: "checkOfflineFunction.php",
+        						type: 'POST',
+        						data: {
+            						var_id: id
+       								},
+       							cache:false,
+       							error:function(data){	
 
-  								}else{
-  								btn.removeClass("offline");
-  								boolAdd = 0;
-  								removeOffline(id);
-  							}
+       							},
+                		    	success: function(data)
+                    			{
+                    				if(data === "true"){
+                    					btn.removeClass("saveOfflineOff");
+  										btn.addClass("saveOfflineOn");
+ 										btnText.text("File Saved");
+ 									}else{
+ 										btn.removeClass("saveOfflineOn");
+       									btn.addClass("saveOfflineOff");
+  										btnText.text("Save File");
+ 									}
+                    			}
+    						});
   							
   						});
 					});
 
 
-					function removeOffline(id){
-							$.ajax({
-       							url: "removeOfflineFunction.php",
-        						type: 'POST',
-        						data: {
-            						var_id: id
-       								},
-       							cache:false,
-       							error:function(data){
-       								//alert("failed to sync with database. Please verify your intenret connection.");
-       							},
-                		    	success: function(data)
-                    			{
- 									//alert("Sync succeeded" + data);
-                    			}
-    						});
-					}
 
-					function addOffline(id){
-							$.ajax({
-       							url: "addOfflineFunction.php",
-        						type: 'POST',
-        						data: {
-            						var_id: id
-       								},
-       							cache:false,
-       							error:function(data){
-       								//alert("failed to sync with database. Please verify your intenret connection.");
-       							},
-                		    	success: function(data)
-                    			{
- 									//alert("Sync succeeded" + data);
-                    			}
-    						});
+					function checkOffline(id){
+						
 					}
 
 					

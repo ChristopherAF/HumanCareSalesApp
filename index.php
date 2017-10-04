@@ -249,13 +249,16 @@ if($dbSuccess) {
 							<span style="color:#FFF; display:none;" id="span-ct">'.$CT.'</span>
 							<span style="color:#FFF; display:none;" id="span-CTLSMS">'.$CTLSMS.'</span>
 							<span style="color:#FFF; display:none;" id="span-CTLSV">'.$CTLSV.'</span> 
-							<button id="'.$id.'" '; 
+							<button id="'.$id.'" type="button"'; 
 							if(in_array($id, $offlineArray)) { 
-							echo'class="offline"';
+							echo'class="saveOfflineBtn saveOfflineOn"><h3 class="filename">File Saved</h3>';
 							} else {
-							echo'class=""';
+							echo'class="saveOfflineBtn saveOfflineOff"><h3 class="filename">Save File</h3>';
 							}	
-							echo'><h3 class="filename">Save File</h3></button>
+							echo'
+								
+
+								</button>
 						</div>
 						';
 

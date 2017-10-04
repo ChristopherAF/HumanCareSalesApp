@@ -332,19 +332,16 @@ div.div-placeholder form input[type="image"] {
     text-align: center;
 }
 
-img.offline {
-    border: 5px solid #8dc63f;
-}
-
 h3.filename {
     text-decoration: underline;
-    color: #FFF;
+    color: #4cae4c;
     font-size: 1.5em;
     white-space: nowrap;
 }
 
-.div-placeholder a{
-    background-color: #999;;
+
+.div-placeholder button.saveOfflineBtn{
+    width:  100%;
     color: #fff;
     display: block;
     text-align: center;
@@ -353,6 +350,14 @@ h3.filename {
     border-radius: 4px;
     margin-top: 5%;
     margin-bottom: 15%;
+} 
+
+.saveOfflineOff{
+    background-color: #999;
+}
+
+.saveOfflineOn{
+    background-color: #5cb85c;
 }
 
 .crop {
