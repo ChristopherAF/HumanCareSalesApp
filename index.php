@@ -201,8 +201,8 @@ if($dbSuccess) {
 			</div><!-- end row -->
 
 			<div class="row" id="resultContainer" style="display: none">
-				<h3 id="titleResult" class="clearfix">Press image to choose for offline</h3>
-				<h3 id="titleResultNumber" class="clearfix">Press link to open media</h3>
+				<h3 id="titleResult" class="clearfix">Press image open media</h3>
+				<h3 id="titleResultNumber" class="clearfix">Press button to select file for offline</h3>
 				<?php
 
 				include('config/dbConfig.php');

@@ -6,6 +6,9 @@ body {
 h3,
 h4 {
     font-size: 1.2em;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     overflow: hidden;
 }
 
 div.container {
@@ -19,7 +22,6 @@ div.container {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 
 /* ------------- NAV -------------*/
@@ -341,9 +343,6 @@ div.div-placeholder form input[type="image"] {
 }
 h3.offline{
      color: #4cae4c;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
 }
 
 
@@ -801,16 +800,6 @@ and (orientation : portrait) {
         font-size: 0.8em;
     }
 
-        /*
-    .crop{
-     height: 110px;
-     overflow: hidden;
-    }
-
-    .crop img{
-     height: 110px;
-    }
-    */
     .crop {
     height: 98px;
     overflow: hidden;
@@ -906,16 +895,7 @@ and (orientation : portrait) {
         margin-top: 0;
         margin-bottom: 2%;
     }
-        /*
-     .crop{
-     height: 110px;
-     overflow: hidden;
-    }
-
-    .crop img{
-     height: 110px;
-    }
-        */
+       
     .crop {
     height: 122px;
     overflow: hidden;
