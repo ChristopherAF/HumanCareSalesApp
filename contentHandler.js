@@ -5,7 +5,7 @@
 	var numberResult = 0;
 
 $(document).ready(function() {	
-					// handles market buttons
+										// handles market buttons
     				$("[name ='market_btn']").click(function(event) {
         				market = this.id;
 						$("#market").hide();        				
@@ -65,7 +65,7 @@ $(document).ready(function() {
     				});
     				
 					// Reset all choices
-					$(".topDiv").click(function(event) {
+					$("topDiv").click(function(event) {
 						reset();
 					});
 
@@ -122,7 +122,8 @@ $(document).ready(function() {
 
  					/* HANDLES THE OFFLINE BUTTON */
 					$( "#offlineBtn" ).click(function() {
-  					document.location.href = 'offline.php';
+  						document.location.href = 'offline.php';
+  						
 					});
 
 					/* HANDLES OFFLINE "SELECTION" */
@@ -164,15 +165,8 @@ $(document).ready(function() {
   						});
 					});
 
-
-
-					function checkOffline(id){
-						
-					}
-
 					
-					$("#logoOffline").click(function() {
-						$('resultContainer').hide();
+					$("#logoOffline").click(function() {						
   						document.location.href = 'index.php';
 					});
 
