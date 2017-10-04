@@ -156,13 +156,13 @@ if($dbSuccess) {
 				<div class="div-placeholder" >	
 					<button id="MS" name="contentTypes_btn" class="btn_img"/>
 					<img  alt="Market &amp; Sales Materials icon" src="images/icons/ms.png" />
-					<h3>Market &amp; Sales Materials</h3>
+					<h3>Market &amp; <br/>Sales Materials</h3>
 				</div>
 
 				<div class="div-placeholder">	
 					<button id="PL" name="contentTypes_btn" class="btn_img"/>
 					<img alt="Price List &amp; Local Content icon" src="images/icons/pl.png" />
-					<h3>Price List &amp; Local Content</h3>
+					<h3>Price List &amp; <br/>Local Content</h3>
 				</div>
 			</div><!-- end row-->
 
@@ -170,7 +170,7 @@ if($dbSuccess) {
 				<div class="div-placeholder">	
 					<button id="QRG" name="contentTypesLS_btn" class="btn_img"/>
 					<img alt="Quick Reference Guides icon" src="images/icons/qrg.png" />
-					<h3>Quick Reference Guides</h3>
+					<h3>Quick Reference <br/>Guides</h3>
 				</div>
 
 				<div class="div-placeholder">	
@@ -195,7 +195,7 @@ if($dbSuccess) {
 				<div class="div-placeholder">	
 					<button id="STV" name="contentTypesLS_btn" class="btn_img"/>
 					<img alt="Sales Training Videos icon" src="images/icons/v.png" />
-					<h3>Sales Training Videos</h3>
+					<h3>Sales Training <br/>Videos</h3>
 				</div>
 
 			</div><!-- end row -->
