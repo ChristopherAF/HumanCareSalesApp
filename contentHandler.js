@@ -65,7 +65,7 @@ $(document).ready(function() {
     				});
     				
 					// Reset all choices
-					$("topDiv").click(function(event) {
+					$("#logo").click(function(event) {
 						reset();
 					});
 

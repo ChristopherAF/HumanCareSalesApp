@@ -55,7 +55,7 @@ if($dbSuccess) {
 </head>
 <body>
 	<div class="topDiv">
-			<img alt="HumanCare logo" src="images/logo/headerlogo.png">
+			<img id="logo" alt="HumanCare logo" src="images/logo/headerlogo.png">
 
 			 <button href="offline.php" id="offlineBtn" type="button" class="btn btn-success btn-circle btn-offline">
 			 	Offline list
