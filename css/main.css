@@ -330,12 +330,12 @@ div.div-placeholder form input[type="image"] {
 
 #titleResultNumber,
 #titleResult {
-    margin: 0 auto;
-    text-align: center;
+    margin-left: 0;
+    text-align: left;
 }
 
 .filename {
-    text-decoration: underline;
+    text-decoration: none;
     color: #fff;
     font-size: 1.5em;
     white-space: nowrap;
@@ -351,7 +351,6 @@ h3.offline{
     color: #fff;
     display: block;
     text-align: center;
-    padding: 3px 4px;
     border: 1px solid transparent;
     border-radius: 4px;
     margin-top: 5%;
@@ -366,14 +365,6 @@ h3.offline{
     background-color: #5cb85c;
 }
 
-.crop {
-    height: 130px;
-    overflow: hidden;
-}
-
-.crop img {
-    height: 130px;
-}
 
 
 
@@ -416,7 +407,7 @@ h4 {
 
 #titleResultNumber,
 #titleResult {
-    margin-left: -30%;
+    margin-left: 0;
 }
 
 #titleResult {
@@ -433,7 +424,141 @@ div#resultContainer {
 }
 
 
-/* ---------- iPAD Landscape format ---------------*/
+
+/* ----------- (iPad Landscape PRO): ----------- */
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px) 
+and (orientation : landscape) {
+
+    .contentDiv {
+    padding-top: 6%;
+    width:100%;
+    padding-right: 0;
+    padding-left: 1%;
+    }
+
+    div.container {
+        width:  100%;
+        margin: 0;
+        padding:0; 
+    }
+
+    #market{
+        padding-left:0;
+    }
+
+    .row{
+        margin-left: 8%;
+    }
+
+    div.div-placeholder {
+    width: 25%;
+    margin: 0% 3% 0 0;
+    }
+
+    #titleResultNumber, #titleResult {
+        margin-left: 0;
+    }
+
+    h3.filename {
+        font-size: 1.2em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
+    }
+
+
+}
+
+/* ----------- (iPad Portrait PRO): ----------- */
+@media screen 
+and (min-width: 1024px) 
+and (max-width: 1366px)
+and (orientation : portrait) {
+    
+     div.contentDiv div.container {
+        width: 80%;
+    }
+
+    .contentDiv {
+        padding-top: 8%;
+    }
+
+
+    form.form-signin {
+        margin: 15% auto 0;
+        width: 50%;
+    }
+
+
+    .btn-success {
+        margin-left: 1%;
+    }
+
+    .btn-offline {
+        width: 110px;
+        height: 46px;
+        margin-left: 3%;
+    }
+
+    form.form-signin {
+        width: 70%;
+        font-size: 0.8em;
+    }
+
+    div.div-placeholder {
+        width: 44%;
+        margin: 0% 5% 0 0;
+    }
+
+    .row {
+        margin-left: 3%;
+        margin-right: 0;
+        width: 100%;
+        margin-top: 7%;
+    }
+
+    h3,
+    h4 {
+        font-size: 1.8em;
+        word-break: break-all;
+        margin-top: 6%;
+        margin-bottom: 10%
+    }
+
+    h3.filename {
+        font-size: 1.2em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
+    }
+
+
+    #titleResultNumber,
+    #titleResult {
+        margin-left: 0;
+    }
+
+    #titleResult {
+        margin-bottom: 1%;
+    }
+
+    #titleResultNumber {
+        margin-top: 0;
+        margin-bottom: 2%;
+    }
+
+    div#resultContainer {
+        margin-top: 5%;
+    }
+
+}
+
+
+
+
+/* ---------- iPAD + iPAD AIR Landscape format ---------------*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -453,7 +578,6 @@ and (orientation : landscape) {
     }
 
     #market{
-		padding-top: 6%;
         padding-left:0;
     }
 
@@ -467,25 +591,24 @@ and (orientation : landscape) {
     }
 
     #titleResultNumber, #titleResult {
-    margin-left: -16%;
+        margin-left: 0;
     }
 
-    .crop {
-    height: 139px;
-    overflow: hidden;
-    }
-
-    .crop img {
-    height: 139px;
+    h3.filename {
+        font-size: 1.2em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
     }
 
 
 }
 
 
-/* ----------- ipad portait ----------- */
+/* ----------- ipad + iPad AIR portait ----------- */
 
-@media screen and (min-width: 768px) 
+@media screen 
+and (min-width: 768px) 
 and (max-width: 1024px)
 and (orientation : portrait) {
     
@@ -541,12 +664,15 @@ and (orientation : portrait) {
 
     h3.filename {
         font-size: 1.2em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
     }
 
 
     #titleResultNumber,
     #titleResult {
-        margin-left: -9%;
+        margin-left: 0;
     }
 
     #titleResult {
@@ -562,21 +688,12 @@ and (orientation : portrait) {
         margin-top: 5%;
     }
 
-    .crop {
-    height: 125px;
-    overflow: hidden;
-    }
-
-    .crop img {
-    height: 125px;
-    }
-
-
 }
 
 
 
-/* ----------- (iPad Air): 768px ----------- */
+
+/* ----------- (iPad Air): 768px 
 
 @media screen and (min-width: 704px) and (max-width: 768px) {
 
@@ -653,11 +770,181 @@ and (orientation : portrait) {
         margin-bottom: 2%;
     }
 }
+----------- */
 
 
-/* ----------- iPad mini / iPhone 6s----------- */
+/* ------------------ iPhone 6 Plus landscape -------------------- */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 3)
+{ 
+    
 
-@media screen and (min-width: 414px) and (max-width: 703px) {
+          div.container {
+        width: 78%;
+    }
+
+    form.form-signin {
+        width: 80%;
+    }
+
+
+    button.btn-offline {
+        font-size: 0.7em;
+        margin-left: 3%;
+        line-height: 0.8em;
+        width: 71px;
+        height: 30px;
+    }
+
+    .contentDiv {
+        padding-top: 6%;
+    }
+
+    .btn-success {
+        margin-left: 17%;
+    }
+
+    form.form-signin {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    div.div-placeholder {
+        width: 28%;
+        margin: 0% 5% 2% 0;
+    }
+
+    .row {
+        margin-left: 3%;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .div-placeholder button.saveOfflineBtn {
+        margin-bottom:5%;
+        margin-top: 3%; 
+    }
+
+    h3,
+    h4 {
+        font-size: 1.2em;
+        word-break: break-all;
+        margin-top: 6%;
+        margin-bottom: 10%
+    }
+
+    h3.filename {
+        font-size: 0.9em;
+    }
+
+
+    #titleResultNumber,
+    #titleResult {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    #titleResult {
+        margin-bottom: 1%;
+    }
+
+    #titleResultNumber {
+        margin-top: 0;
+        margin-bottom: 2%;
+    }
+
+}
+
+/* iPhone 6 Plus portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 3)
+{ 
+
+      div.container {
+        width: 100%;
+    }
+
+    form.form-signin {
+        width: 80%;
+    }
+
+
+    button.btn-offline {
+        font-size: 0.7em;
+        margin-left: 3%;
+        line-height: 0.8em;
+        width: 71px;
+        height: 30px;
+    }
+
+    .contentDiv {
+        padding-top: 8%;
+    }
+
+    .btn-success {
+        margin-left: 17%;
+    }
+
+    form.form-signin {
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    div.div-placeholder {
+        width: 45%;
+        margin: 0% 5% 0 0;
+    }
+
+    .row {
+        margin-left: 3%;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    h3,
+    h4 {
+        font-size: 0.9em;
+        word-break: break-all;
+        margin-top: 6%;
+        margin-bottom: 10%
+    }
+
+    h3.filename {
+        font-size: 0.9em;
+    }
+
+    #titleResultNumber,
+    #titleResult {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    #titleResult {
+        margin-bottom: 1%;
+    }
+
+    #titleResultNumber {
+        margin-top: 0;
+        margin-bottom: 2%;
+    }
+}
+
+
+
+
+
+/* ----------- iPad mini  
+
+@media screen and (min-width: 414px) 
+and (max-width: 703px)
+
+ {
 
     div.container {
         width: 100%;
@@ -712,15 +999,7 @@ and (orientation : portrait) {
         font-size: 0.9em;
     }
 
-     .crop{
-     height: 100px;
-     overflow: hidden;
-    }
-
-    .crop img{
-     height: 100px;
-    }
-
+    
     #titleResultNumber,
     #titleResult {
         margin-left: -30%;
@@ -735,39 +1014,101 @@ and (orientation : portrait) {
         margin-bottom: 2%;
     }
 }
+-------------- */
 
-
-
-/* ----------- iPhone 6 ----------- */
-
-@media screen and (min-width: 320px) and (max-width: 414px) {
+/* ------------------ iPhone 6 landscape -------------------- */
+@media only screen 
+and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 2)
+{ 
+  
+    .contentDiv {
+    padding-top: 7%;
+    width:75%;
+    padding-right: 0;
+    padding-left: 1%;
+    }
 
     div.container {
-        width: 100%;
+        width:  100%;
         margin: 0;
         padding:0; 
     }
 
-    .contentDiv {
-        padding-top: 10%;
-        width: 100%;
+    #market{
+        padding-left:0;
     }
 
-    #market{
-        padding-top: 6%;
-        padding-left:0;
+    .row{
+        margin-left: 0;
+    }
+
+    div.div-placeholder {
+    width: 30%;
+    margin: 0% 3% 0 0;
+    }
+
+    #titleResultNumber, #titleResult {
+        margin-left: 0;
+    }
+
+      .div-placeholder button.saveOfflineBtn {
+        margin-bottom:5%;
+        margin-top: 3%; 
+    }
+
+    h3,
+    h4 {
+        font-size: 1.1em;
+        word-break: break-all;
+        margin-top: 6%;
+        margin-bottom: 10%
+    }
+
+    h3.filename {
+        font-size: 1em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
+    }
+
+
+
+}
+
+/* iPhone 6 portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2)
+{ 
+
+    div.container {
+        width: 100%;
     }
 
     form.form-signin {
         width: 80%;
     }
 
+
     button.btn-offline {
-        padding: 1px 0px;
-        border-radius: 5px;
         font-size: 0.7em;
-        width: 80px;
+        margin-left: 3%;
+        line-height: 0.8em;
+        width: 71px;
         height: 30px;
+    }
+
+    .contentDiv {
+        padding-top: 8%;
+    }
+
+    .btn-success {
+        margin-left: 17%;
     }
 
     form.form-signin {
@@ -776,14 +1117,11 @@ and (orientation : portrait) {
     }
 
     div.div-placeholder {
-        /*width: 30%;
-        margin: 0% 5% 0 0; */
-        width: 46%;
-        margin: 0% 2% 0 0;
+        width: 45%;
+        margin: 0% 5% 0 0;
     }
 
     .row {
-       /* margin-left: 17%; */
         margin-left: 3%;
         margin-right: 0;
         width: 100%;
@@ -798,22 +1136,100 @@ and (orientation : portrait) {
     }
 
     h3.filename {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 
-    .crop {
-    height: 98px;
-    overflow: hidden;
+   
+      .div-placeholder button.saveOfflineBtn {
+        margin-bottom:5%;
+        margin-top: 3%; 
     }
-
-    .crop img {
-    height: 98px;
-    }
-
 
     #titleResultNumber,
     #titleResult {
-        margin-left: -6%;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    #titleResult {
+        margin-bottom: 1%;
+        padding-top: 5px;
+    }
+
+    #titleResultNumber {
+        margin-top: 0;
+        margin-bottom: 2%;
+    }
+
+    h3.filename {
+        font-size: 0.9em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
+    }
+
+}
+
+
+/* ----------- OTHER PHONES ----------- */
+
+@media screen 
+and (max-width: 374px)
+and (min-width: 320px)
+and (orientation: portrait) {
+    div.container {
+        width: 100%;
+    }
+    .contentDiv {
+        padding-top: 10%;
+    }
+
+    button.btn-offline {
+        padding: 1px 0px;
+        border-radius: 5px;
+        margin-left: 4%;
+        font-size: 0.5em;
+        width: 50px;
+        height: 22px;
+    }
+
+
+    form.form-signin {
+        width: 100%;
+        font-size: 0.6em;
+    }
+
+    div.container div#market div.flag {
+        margin-top: 0;
+    }
+
+    div.div-placeholder {
+        margin: 0% 9% 0 0;
+        width: 70%;
+    }
+
+    .row {
+        margin-left: 14%;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    h3,
+    h4 {
+        font-size: 0.9em;
+        word-break: break-all;
+        margin-top: 6%;
+        margin-bottom: 10%
+    }
+
+    h3.filename {
+        font-size: 0.9em;
+    }
+
+    #titleResult,
+    #titleResultNumber {
+        margin-left: 2%;
+        margin-left: 0;
     }
 
     #titleResult {
@@ -824,12 +1240,18 @@ and (orientation : portrait) {
         margin-top: 0;
         margin-bottom: 2%;
     }
+    
+
+    h3.filename {
+        font-size: 1.2em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
+    }
+
 }
 
-
 /* ----------- iPhone 4 and 4S ----------- */
-
-
 /* ----------- iPhone 5 and 5S ----------- */
 
 @media screen and (max-width: 320px) {
@@ -885,7 +1307,7 @@ and (orientation : portrait) {
     #titleResult,
     #titleResultNumber {
         margin-left: 2%;
-        margin-left: -34%;
+        margin-left: 0;
     }
 
     #titleResult {
@@ -896,14 +1318,13 @@ and (orientation : portrait) {
         margin-top: 0;
         margin-bottom: 2%;
     }
-       
-    .crop {
-    height: 122px;
-    overflow: hidden;
-    }
+    
 
-    .crop img {
-    height: 122px;
+    h3.filename {
+        font-size: 1.2em;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        text-decoration: none;
     }
 
 }

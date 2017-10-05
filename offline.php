@@ -100,12 +100,12 @@ if($dbSuccess) {
 
 									echo '
 									<div class="div-placeholder" name="resultBox" >
-										<div class="crop">
+										<div>
 											<a href="files/'.$filename.'">
 												<img id="'.$id.'" src="files/'.$iconFilename.'"/>
 											</a>
 										</div>
-										<h3 class="filename offline">'.$filename.'</h3>
+										<h3 class="filename offline"></h3>
 									</div>
 									';
 								
