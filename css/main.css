@@ -746,7 +746,7 @@ and (orientation : portrait){
     }
 
     h3.filename {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
 
@@ -893,7 +893,7 @@ and (min-device-width: 375px)
     }
 
     h3.filename {
-        font-size: 0.9em;
+        font-size: 0.7em;
         margin-top: 3%;
         margin-bottom: 5%;
         text-decoration: none;
@@ -980,7 +980,7 @@ and (min-device-width: 375px)
     }
 
     h3.filename {
-        font-size: 0.9em;
+        font-size: 0.7em;
         margin-top: 3%;
         margin-bottom: 5%;
         text-decoration: none;
