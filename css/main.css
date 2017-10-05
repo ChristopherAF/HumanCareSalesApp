@@ -335,7 +335,6 @@ div.div-placeholder form input[type="image"] {
 }
 
 .filename {
-    text-decoration: underline;
     color: #fff;
     font-size: 1.5em;
     white-space: nowrap;

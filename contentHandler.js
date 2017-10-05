@@ -153,11 +153,11 @@ $(document).ready(function() {
                     				if(data === "true"){
                     					btn.removeClass("saveOfflineOff");
   										btn.addClass("saveOfflineOn");
- 										btnText.text("File Saved");
+ 										btnText.text("Available Offline");
  									}else{
  										btn.removeClass("saveOfflineOn");
        									btn.addClass("saveOfflineOff");
-  										btnText.text("Save File");
+  										btnText.text("Make Available Offline");
  									}
                     			}
     						});
