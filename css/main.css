@@ -11,16 +11,16 @@ h4 {
      overflow: hidden;
 }
 
-.container {
-    width: 60%;
-}
-
-
 .contentDiv {
     padding-top: 4%;
     max-width: 1900px;
     margin-left: auto;
     margin-right: auto;
+    min-width: 320px;
+}
+
+.container {
+    width: 60%;
 }
 
 
@@ -430,7 +430,6 @@ div#resultContainer {
 and (min-device-width : 1024px) 
 and (max-device-width : 1366px) 
 and (orientation : landscape) {
-
     .contentDiv {
     padding-top: 6%;
     width:100%;
@@ -476,7 +475,6 @@ and (orientation : landscape) {
 and (min-width: 1024px) 
 and (max-width: 1366px)
 and (orientation : portrait) {
-    
      div.contentDiv div.container {
         width: 80%;
     }
@@ -555,15 +553,11 @@ and (orientation : portrait) {
 
 }
 
-
-
-
 /* ---------- iPAD + iPAD AIR Landscape format ---------------*/
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-
 	.contentDiv {
     padding-top: 6%;
     width:100%;
@@ -610,8 +604,7 @@ and (orientation : landscape) {
 @media screen 
 and (min-width: 768px) 
 and (max-width: 1024px)
-and (orientation : portrait) {
-    
+and (orientation : portrait){  
      div.contentDiv div.container {
         width: 80%;
     }
@@ -691,98 +684,14 @@ and (orientation : portrait) {
 }
 
 
-
-
-/* ----------- (iPad Air): 768px 
-
-@media screen and (min-width: 704px) and (max-width: 768px) {
-
-    form.form-signin {
-        margin: 15% auto 0;
-        width: 50%;
-    }
-
-    div.container {
-        width: 100%;
-    }
-
-    .btn-success {
-        margin-left: 8%;
-    }
-
-    button.btn-offline {
-        padding: 1px 0px;
-        border-radius: 5px;
-        margin-left: 7%;
-        font-size: 0.7em;
-        width: 80px;
-        height: 30px;
-    }
-
-    .contentDiv {
-        padding-top: 8%;
-    }
-
-    .btn-success {
-        margin-left: 7%;
-    }
-
-    form.form-signin {
-        width: 100%;
-        font-size: 0.8em;
-    }
-
-    div.div-placeholder {
-        width: 40%;
-        margin: 0% 5% 0 0;
-    }
-
-    .row {
-        margin-left: 7%;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    h3,
-    h4 {
-        font-size: 1em;
-        word-break: break-all;
-        margin-top: 6%;
-        margin-bottom: 10%
-    }
-
-    h3.filename {
-        font-size: 1em;
-    }
-
-
-    #titleResultNumber,
-    #titleResult {
-        margin-left: -14%;
-    }
-
-    #titleResult {
-        margin-bottom: 1%;
-    }
-
-    #titleResultNumber {
-        margin-top: 0;
-        margin-bottom: 2%;
-    }
-}
------------ */
-
-
 /* ------------------ iPhone 6 Plus landscape -------------------- */
 @media only screen
   and (min-device-width: 414px)
   and (max-device-width: 736px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 3)
-{ 
+  and (orientation: landscape){ /*and (-webkit-min-device-pixel-ratio: 3) */
     
 
-          div.container {
+    div.container {
         width: 78%;
     }
 
@@ -837,7 +746,7 @@ and (orientation : portrait) {
     }
 
     h3.filename {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
 
@@ -862,9 +771,7 @@ and (orientation : portrait) {
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 3)
-{ 
+  and (orientation: portrait){ /*  and (-webkit-min-device-pixel-ratio: 3) */
 
       div.container {
         width: 100%;
@@ -916,7 +823,7 @@ and (orientation : portrait) {
     }
 
     h3.filename {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     #titleResultNumber,
@@ -936,93 +843,11 @@ and (orientation : portrait) {
 }
 
 
-
-
-
-/* ----------- iPad mini  
-
-@media screen and (min-width: 414px) 
-and (max-width: 703px)
-
- {
-
-    div.container {
-        width: 100%;
-    }
-
-    form.form-signin {
-        width: 80%;
-    }
-
-
-    button.btn-offline {
-        font-size: 0.7em;
-        margin-left: 3%;
-        line-height: 0.8em;
-        width: 71px;
-        height: 30px;
-    }
-
-    .contentDiv {
-        padding-top: 8%;
-    }
-
-    .btn-success {
-        margin-left: 17%;
-    }
-
-    form.form-signin {
-        width: 100%;
-        font-size: 0.8em;
-    }
-
-    div.div-placeholder {
-        width: 30%;
-        margin: 0% 5% 0 0;
-    }
-
-    .row {
-        margin-left: 17%;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    h3,
-    h4 {
-        font-size: 0.9em;
-        word-break: break-all;
-        margin-top: 6%;
-        margin-bottom: 10%
-    }
-
-    h3.filename {
-        font-size: 0.9em;
-    }
-
-    
-    #titleResultNumber,
-    #titleResult {
-        margin-left: -30%;
-    }
-
-    #titleResult {
-        margin-bottom: 1%;
-    }
-
-    #titleResultNumber {
-        margin-top: 0;
-        margin-bottom: 2%;
-    }
-}
--------------- */
-
 /* ------------------ iPhone 6 landscape -------------------- */
 @media only screen 
 and (min-device-width: 375px)
   and (max-device-width: 667px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2)
-{ 
+  and (orientation: landscape){ /*  and (-webkit-min-device-pixel-ratio: 2)*/
   
     .contentDiv {
     padding-top: 7%;
@@ -1068,7 +893,7 @@ and (min-device-width: 375px)
     }
 
     h3.filename {
-        font-size: 1em;
+        font-size: 0.9em;
         margin-top: 3%;
         margin-bottom: 5%;
         text-decoration: none;
@@ -1082,9 +907,7 @@ and (min-device-width: 375px)
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2)
-{ 
+  and (orientation: portrait){ /* and (-webkit-min-device-pixel-ratio: 2)*/
 
     div.container {
         width: 100%;
@@ -1135,11 +958,6 @@ and (min-device-width: 375px)
         margin-bottom: 10%
     }
 
-    h3.filename {
-        font-size: 0.9em;
-    }
-
-   
       .div-placeholder button.saveOfflineBtn {
         margin-bottom:5%;
         margin-top: 3%; 
@@ -1175,10 +993,10 @@ and (min-device-width: 375px)
 
 @media screen 
 and (max-width: 374px)
-and (min-width: 320px)
-and (orientation: portrait) {
+and (min-width: 320px){ /*and (orientation: portrait) */
     div.container {
-        width: 100%;
+      /*  width: 100%;*/
+        min-width: 320px
     }
     .contentDiv {
         padding-top: 10%;
@@ -1222,9 +1040,6 @@ and (orientation: portrait) {
         margin-bottom: 10%
     }
 
-    h3.filename {
-        font-size: 0.9em;
-    }
 
     #titleResult,
     #titleResultNumber {
@@ -1243,85 +1058,7 @@ and (orientation: portrait) {
     
 
     h3.filename {
-        font-size: 1.2em;
-        margin-top: 3%;
-        margin-bottom: 5%;
-        text-decoration: none;
-    }
-
-}
-
-/* ----------- iPhone 4 and 4S ----------- */
-/* ----------- iPhone 5 and 5S ----------- */
-
-@media screen and (max-width: 320px) {
-    div.container {
-        width: 100%;
-    }
-    .contentDiv {
-        padding-top: 10%;
-    }
-
-    button.btn-offline {
-        padding: 1px 0px;
-        border-radius: 5px;
-        margin-left: 4%;
-        font-size: 0.5em;
-        width: 50px;
-        height: 22px;
-    }
-
-
-    form.form-signin {
-        width: 100%;
-        font-size: 0.6em;
-    }
-
-    div.container div#market div.flag {
-        margin-top: 0;
-    }
-
-    div.div-placeholder {
-        margin: 0% 9% 0 0;
-        width: 70%;
-    }
-
-    .row {
-        margin-left: 14%;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    h3,
-    h4 {
-        font-size: 0.9em;
-        word-break: break-all;
-        margin-top: 6%;
-        margin-bottom: 10%
-    }
-
-    h3.filename {
-        font-size: 0.9em;
-    }
-
-    #titleResult,
-    #titleResultNumber {
-        margin-left: 2%;
-        margin-left: 0;
-    }
-
-    #titleResult {
-        margin-bottom: 1%;
-    }
-
-    #titleResultNumber {
-        margin-top: 0;
-        margin-bottom: 2%;
-    }
-    
-
-    h3.filename {
-        font-size: 1.2em;
+        font-size: 0.8em;
         margin-top: 3%;
         margin-bottom: 5%;
         text-decoration: none;
