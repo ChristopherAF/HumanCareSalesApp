@@ -6,16 +6,24 @@
 	mysqli_set_charset($dbConnected, 'utf8');
 	
 	$userid = @$_POST['userid'];
+
+	include_once('logInAndOut/authorise.php');
+
+	$status = @$_POST['status'];
+	$loginAuthorised = (@$_COOKIE["loginAuthorised"] == "34f326defb43f22a4fef8af2a25fa331");
+	$admin = (@$_COOKIE['admin'] == "70e90320def2267590e4bef4f682eb3e");
+
+	if($loginAuthorised && $admin) {
 	
-	if($dbConnected){
+		if($dbConnected){
 
-		$sqlSelect = "SELECT * FROM login WHERE id='".$userid."';";
-		$sqlSelect_query = mysqli_query($dbConnected, $sqlSelect);
+			$sqlSelect = "SELECT * FROM login WHERE id='".$userid."';";
+			$sqlSelect_query = mysqli_query($dbConnected, $sqlSelect);
 
-		while ($row = mysqli_fetch_array($sqlSelect_query, MYSQLI_ASSOC)) {
-			$username = $row['username'];	
+			while ($row = mysqli_fetch_array($sqlSelect_query, MYSQLI_ASSOC)) {
+				$username = $row['username'];	
+			}
 		}
-	}
 
 ?>
 
@@ -84,3 +92,15 @@
 
 		</body>
 	</html>
+
+<?php
+} else {
+	$username = @$_POST['username'];
+	$password = @$_POST['password'];
+	if (userAuthorised($dbConnected, $username, $password)) {
+		header("Location: index.php");
+	} else {
+		header("Location: logInAndOut/loginForm.php");
+	}
+}
+?>

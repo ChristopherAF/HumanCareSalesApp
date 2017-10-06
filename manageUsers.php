@@ -11,8 +11,15 @@ if ($dbConnected) {
 }
 
 if ($dbSuccess) {
+	include_once('logInAndOut/authorise.php');
 
-	$users_SQLselect_Query = mysqli_query($dbConnected, "SELECT * FROM login");
+	$status = @$_POST['status'];
+	$loginAuthorised = (@$_COOKIE["loginAuthorised"] == "34f326defb43f22a4fef8af2a25fa331");
+	$admin = (@$_COOKIE['admin'] == "70e90320def2267590e4bef4f682eb3e");
+
+	if($loginAuthorised && $admin) {
+
+		$users_SQLselect_Query = mysqli_query($dbConnected, "SELECT * FROM login");
 
 ?>
 
@@ -142,5 +149,14 @@ if ($dbSuccess) {
 
 
 <?php
+	} else {
+		$username = @$_POST['username'];
+		$password = @$_POST['password'];
+		if (userAuthorised($dbConnected, $username, $password)) {
+			header("Location: index.php");
+		} else {
+			header("Location: logInAndOut/loginForm.php");
+		}
+	}
 }
 ?>
