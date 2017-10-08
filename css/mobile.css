@@ -1,0 +1,189 @@
+h3,h4{	
+	font-size: xx-large;
+}
+
+.filename {
+    font-size: x-large;
+}
+
+div.contentDiv{
+	margin-left:0;
+	margin-right: 0;
+	padding-top: 8%;
+}
+
+div.container {
+    width: 100%;
+    margin-left:0;
+    margin-right:0;
+}
+
+.row {
+   	margin-left: 0;
+}
+
+.div-placeholder button.saveOfflineBtn {
+    margin-top: 3%;
+    margin-bottom: 8%;
+}
+
+#titleResult,#titleResultNumber{
+	margin-left:2%;
+}
+
+#titleResult{
+	margin-bottom: 3%;
+}
+
+/*--------------- MEDIA QUERIES ---------------------*/
+
+@media screen 
+and (orientation: portrait) 
+{ 
+	div.div-placeholder {
+    width: 45%;
+    margin: 0% 2% 0 2%;
+	}	
+}
+
+@media screen 
+and (orientation: landscape) 
+{ 
+	div.container {
+    	width: 87%;
+        margin: 0 auto;
+	}
+
+    div.contentDiv {
+        padding-top: 6%;
+	}
+
+
+    div.div-placeholder {
+    width: 26%;
+    margin: 0% 7% 3% 0;
+	}
+
+	h3, h4 {
+    font-size: small;
+	}
+
+	#titleResult,#titleResultNumber{
+	margin-left:0;
+	}
+
+	#titleResult {
+    margin-bottom: 1%;
+	}
+
+	.filename {
+    	font-size: x-small;
+	}
+
+	.btn-offline {
+    width: 20%;
+    height: auto;
+    font-size: xx-small;
+	}
+}
+
+@media screen 
+and (orientation: landscape) 
+and (min-device-width: 1024px)
+{ 
+	h3, h4 {
+	    font-size: x-large;
+	}
+
+	.filename {
+    font-size: large;
+	}
+
+	.btn-offline {
+    width: 21%;
+    height: auto;
+    font-size: large;
+	}
+}
+
+@media screen 
+and (orientation: portrait) 
+and (min-device-width: 1024px)
+{ 
+	h3, h4 {
+	    font-size: x-large;
+	}
+
+	.filename {
+    font-size: large;
+	}
+
+	.btn-offline {
+    width: 21%;
+    height: auto;
+    font-size: large;
+	}
+}
+
+
+/* ----------------  iPhones 6 ----------------  */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+	body{
+	background-color: blue;
+	}
+
+	h3,h4{	
+		font-size: small;
+	}
+
+	#offlineBtn{
+		font-size: small;
+	}
+
+	.filename{
+		font-size: x-small;	
+	}
+
+	div.container{
+		padding-top:2%;
+	}
+
+}
+
+/* ----------------- iPhones 6+ ----------------  */
+@media screen 
+and (device-width: 414px) 
+and (device-height: 736px) 
+and (-webkit-device-pixel-ratio: 3){
+	
+	body{
+	background-color: yellow;
+	}
+
+
+	h3,h4{	
+		font-size: small;
+	}
+
+	#offlineBtn{
+		font-size: x-small;
+	}
+
+	.filename{
+		font-size: x-small;	
+	}
+
+
+	div.container{
+		padding-top:2%;
+	}
+}
+
+
