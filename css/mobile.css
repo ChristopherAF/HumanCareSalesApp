@@ -135,10 +135,6 @@ and (min-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
 
-	body{
-	background-color: blue;
-	}
-
 	h3,h4{	
 		font-size: small;
 	}
@@ -162,11 +158,6 @@ and (min-device-width: 1024px)
 and (device-width: 414px) 
 and (device-height: 736px) 
 and (-webkit-device-pixel-ratio: 3){
-	
-	body{
-	background-color: yellow;
-	}
-
 
 	h3,h4{	
 		font-size: small;
