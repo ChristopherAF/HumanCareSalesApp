@@ -151,6 +151,11 @@ and (min-device-width: 1024px)
 		padding-top:2%;
 	}
 
+	div.formDiv, div.login {
+    	width: 100%;
+    	font-size: x-small;
+	}
+
 }
 
 /* ----------------- iPhones 6+ ----------------  */
@@ -159,12 +164,13 @@ and (device-width: 414px)
 and (device-height: 736px) 
 and (-webkit-device-pixel-ratio: 3){
 
+
 	h3,h4{	
 		font-size: small;
 	}
 
 	#offlineBtn{
-		font-size: x-small;
+		font-size: xx-small;
 	}
 
 	.filename{
@@ -174,6 +180,11 @@ and (-webkit-device-pixel-ratio: 3){
 
 	div.container{
 		padding-top:2%;
+	}
+
+	div.formDiv, div.login {
+    	width: 100%;
+    	font-size: x-small;
 	}
 }
 
