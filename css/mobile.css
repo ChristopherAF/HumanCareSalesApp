@@ -1,9 +1,13 @@
-h3,h4{	
-	font-size: xx-large;
-}
+h3, h4 {
+	    font-size: 2.5vw;
+	}
 
 .filename {
-    font-size: x-large;
+    font-size: 2vw;
+}
+
+.btn-offline {
+    font-size: 1.5vw;
 }
 
 div.contentDiv{
@@ -29,6 +33,7 @@ div.container {
 
 #titleResult,#titleResultNumber{
 	margin-left:2%;
+	font-size: 2.5vw;
 }
 
 #titleResult{
@@ -64,9 +69,14 @@ and (orientation: landscape)
     margin: 0% 7% 3% 0;
 	}
 
-	h3, h4 {
-    font-size: small;
+	.filename {
+    	font-size: 1.5vw;
+	}	
+
+	.btn-offline {
+    	font-size: 1.5vw;
 	}
+
 
 	#titleResult,#titleResultNumber{
 	margin-left:0;
@@ -76,14 +86,9 @@ and (orientation: landscape)
     margin-bottom: 1%;
 	}
 
-	.filename {
-    	font-size: x-small;
-	}
-
 	.btn-offline {
     width: 20%;
     height: auto;
-    font-size: xx-small;
 	}
 }
 
@@ -91,18 +96,10 @@ and (orientation: landscape)
 and (orientation: landscape) 
 and (min-device-width: 1024px)
 { 
-	h3, h4 {
-	    font-size: x-large;
-	}
-
-	.filename {
-    font-size: large;
-	}
 
 	.btn-offline {
     width: 21%;
     height: auto;
-    font-size: large;
 	}
 }
 
@@ -110,18 +107,10 @@ and (min-device-width: 1024px)
 and (orientation: portrait) 
 and (min-device-width: 1024px)
 { 
-	h3, h4 {
-	    font-size: x-large;
-	}
-
-	.filename {
-    font-size: large;
-	}
 
 	.btn-offline {
     width: 21%;
     height: auto;
-    font-size: large;
 	}
 }
 
@@ -135,25 +124,14 @@ and (min-device-width: 1024px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
 
-	h3,h4{	
-		font-size: small;
-	}
-
-	#offlineBtn{
-		font-size: small;
-	}
-
-	.filename{
-		font-size: x-small;	
-	}
-
+ 
 	div.container{
 		padding-top:2%;
 	}
 
 	div.formDiv, div.login {
     	width: 100%;
-    	font-size: x-small;
+    	 font-size: 1.5vw;
 	}
 
 }
@@ -165,26 +143,13 @@ and (device-height: 736px)
 and (-webkit-device-pixel-ratio: 3){
 
 
-	h3,h4{	
-		font-size: small;
-	}
-
-	#offlineBtn{
-		font-size: xx-small;
-	}
-
-	.filename{
-		font-size: x-small;	
-	}
-
-
 	div.container{
 		padding-top:2%;
 	}
 
 	div.formDiv, div.login {
     	width: 100%;
-    	font-size: x-small;
+    	 font-size: 1.5vw;
 	}
 }
 
