@@ -130,7 +130,6 @@ and (min-device-width: 1024px)
 	}
 
 	div.formDiv, div.login {
-    	width: 100%;
     	 font-size: 1.5vw;
 	}
 
@@ -148,7 +147,6 @@ and (-webkit-device-pixel-ratio: 3){
 	}
 
 	div.formDiv, div.login {
-    	width: 100%;
     	 font-size: 1.5vw;
 	}
 }
